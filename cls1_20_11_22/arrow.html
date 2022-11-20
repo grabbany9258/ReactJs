@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+//let hello = function{ // avbeo hoy
+        function hello() {
+            document.write("Hello world from Normal Funtion!"); // Normal funtion
+        }
+        hello();  // calling function
+
+ // Arrow Function
+
+        let hello1 = () => {
+            document.write("<br> Hello world from Arrow Function");
+        }
+
+        hello1();
+
+// Amn vabe parameter diye o arrow function dew jay
+
+        let hello2 = name => {
+            document.write("<br> Hello " + name + " from Arrow Function");
+        }
+
+        hello2("Rabbany");
+
+// Multiple perameter
+        let hello3 = (name,address) => {
+            document.write("<br> Hello " + name + address + " from Arrow Function with multiple perameter");
+        }
+
+        hello3("Rabbany","Dhanmondi");
+
+    </script>
+</body>
+
+</html>
