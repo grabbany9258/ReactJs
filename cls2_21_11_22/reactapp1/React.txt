@@ -1,0 +1,14 @@
+1) Create Project:
+	npx create-react-app myapp1
+
+2)Delete Project:
+	npx create-react-app myapp1
+
+3)Run Project
+	npm start
+
+4) app.js =>index.js=>public ar moddhe index.html
+Node: node -v
+NPM: npm -v
+#############
+App.js theke ase index.js theke
