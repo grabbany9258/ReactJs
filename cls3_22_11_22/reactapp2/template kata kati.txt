@@ -1,0 +1,11 @@
+katle ja ja korte hbe:
+	1) akta folder tar vitor file.
+	2) header part ta kete niye jete hbe Header.js a
+	3)className change korte hbe
+	4)function banate hbe 
+	5)export korte hbe  export default Header;
+	6)import in App.js 
+	import Header from "./header/Header.js";
+	7) function a nav ar upore dite hbe 
+	<Header />
+	
