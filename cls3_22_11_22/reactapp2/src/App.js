@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./header/Header.js";
@@ -18,7 +19,7 @@ function App() {
       <div className="container mt-5">
         <div className="row">
           <Sidebar />
-          <Home />
+          <Outlet />
         </div>
       </div>
       <Footer copyright="Copyright (c) all rights reserved the computers limited" />

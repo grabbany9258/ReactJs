@@ -1,0 +1,9 @@
+Form
+	1) form banate hbe.
+	2)import { useState } from "react"; contact.js a ante hbe
+	3) const [inputs, setInputs] = useState({});
+	4)  const handleSubmit = (event) => {
+    	event.preventDefault();
+   	 alert(inputs);
+	  };
+	5)

@@ -1,0 +1,26 @@
+Routing Procedure:
+	1) npm i -D react-router-dom
+	2) Routing hoy index.js a .
+	3) index.js a 
+	import { BrowserRouter, Routes, Route } from "react-router-dom";
+	
+
+
+	4) Route gula import na thakle import korte hbe..
+	5)w3 school the layout.js theke 
+	import { Outlet, Link } from "react-router-dom";
+	6) App.js a <Home /> change kore <Outlet /> dite hbe..
+	7) RouterApp ta dite hbe render a ...index.js a
+
+#### About jevabe ana holo:
+
+	1)about.js banate hbe.
+	2)function & export a About dite hbe
+	3) index.js a import korte hbe
+	import About from "./About";
+	4) Route path abnate hbe 
+	<Route path="/about" element={<About />} />
+	5) Navbar a link change korte hbe 
+	<Link to="/about" className="nav-link active">
+              	About us
+           	 </Link>
