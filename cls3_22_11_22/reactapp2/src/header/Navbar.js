@@ -25,6 +25,21 @@ function navbar() {
               All Cars
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/colors" className="nav-link">
+              Colors
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/lifecycle" className="nav-link">
+              LifeCycle
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/users" className="nav-link">
+              UserList
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

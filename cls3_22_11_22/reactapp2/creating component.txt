@@ -1,0 +1,5 @@
+1) To Create component have to install this package with this command
+	npx generate-react-cli
+2)For creating components
+	npx generate-react-cli component Search
+	
