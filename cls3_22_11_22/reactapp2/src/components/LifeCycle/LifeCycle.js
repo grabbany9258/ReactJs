@@ -24,7 +24,7 @@ class LifeCycle extends React.Component {
       <div>
         <h1>GeeksForGeeks.org, Hello{this.state.hello}</h1>
         <h2>
-          <a onClick={this.changeState.bind(this)}>Press Here!</a>
+          <p onClick={this.changeState.bind(this)}>Press Here!</p>
         </h2>
       </div>
     );

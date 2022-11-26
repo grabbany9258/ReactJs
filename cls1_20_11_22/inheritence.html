@@ -23,7 +23,7 @@
 
         class Model extends Car {
             constructor(year, price) {
-                super("Ford", "Black");
+                super(name,brand);
                 this.year = year;
                 this.price = price;
                 //    this.brand = name ; // super bolle ata lagbe na
@@ -33,7 +33,7 @@
 
         // const carobj = new Car("Ford", "Red");
         // const modelobj = new Model("Mustang");
-        const modelobj = new Model("2022", "50");
+         const modelobj = new Model("2022", "50");
         document.write(modelobj.present());
 
         // console.log(carobj);

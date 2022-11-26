@@ -73,7 +73,7 @@ const UserList = () => {
                 className="btn
                 btn-outline-danger mx-2"
               >
-                {" "}
+
                 Delete
               </span>
             </td>
