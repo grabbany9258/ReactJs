@@ -12,6 +12,7 @@ import Garage from "./Garage";
 import Colors from "./components/Colors/Colors";
 import LifeCycle from "./components/LifeCycle/LifeCycle";
 import UserList from "./users/UserList";
+import AllProduct from "./product/AllProduct";
 
 export default function RouterApp() {
   return (
@@ -25,6 +26,7 @@ export default function RouterApp() {
           <Route path="/colors" element={<Colors />} />
           <Route path="/lifecycle" element={<LifeCycle />} />
           <Route path="/users" element={<UserList />} />
+          <Route path="/products" element={<AllProduct />} />
           <Route path="*" element={<Nopage />} />
         </Route>
       </Routes>
