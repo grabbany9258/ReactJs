@@ -11,6 +11,8 @@ import SingleCause from "./components/SingleCause";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import UserList from "./users/UserList";
+import AllProduct from "./product/AllProduct";
+
 
 
 export default function RouterApp() {
@@ -25,6 +27,7 @@ export default function RouterApp() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/users" element={<UserList />} />
+          <Route path="/allproduct" element={<AllProduct />} />
 
         </Route>
       </Routes>

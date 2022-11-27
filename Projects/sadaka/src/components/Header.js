@@ -110,6 +110,11 @@ export default function Header() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
+                                        <Link to="/allproduct" className="nav-link">
+                                            All Products
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
                                         <Link to="/contact" className="nav-link">
                                             Contact
                                         </Link>

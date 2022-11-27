@@ -46,42 +46,43 @@ const UserList = () => {
   };
 
   return (
-    <div className="col-sm-8">
-      <Link to="/insert" className="btn btn-primary">
-        {" "}
-        Create User{" "}
-      </Link>
+    <div>
+      <div className="col-sm-8">
+        <Link to="/insert" className="btn btn-primary">
+          {" "}
+          Create User{" "}
+        </Link>
 
-      <table className="table table-striped">
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Eamil</th>
-          <th>Action</th>
-        </tr>
-        {isuser.map((item, index) => (
+        <table className="table table-striped">
           <tr>
-            <td>{index + 1}</td>
-            <td>{item.name}</td>
-            <td>{item.email}</td>
-            <td>
-              <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
-                Edit
-              </Link>
-              <span
-                onClick={() => deleteConfirm(item.id)}
-                className="btn
-                btn-outline-danger mx-2"
-              >
-
-                Delete
-              </span>
-            </td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Eamil</th>
+            <th>Action</th>
           </tr>
-        ))}
-      </table>
+          {isuser.map((item, index) => (
+            <tr>
+              <td>{index + 1}</td>
+              <td>{item.name}</td>
+              <td>{item.email}</td>
+              <td>
+                <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
+                  Edit
+                </Link>
+                <span
+                  onClick={() => deleteConfirm(item.id)}
+                  className="btn
+                btn-outline-danger mx-2"
+                >
 
-      {/* {isuser.map((item, index) => (
+                  Delete
+                </span>
+              </td>
+            </tr>
+          ))}
+        </table>
+
+        {/* {isuser.map((item, index) => (
         <div className="list" key={item.id}>
           <p>Name: {item.name}</p>
           <p>Email: {item.email}</p>
@@ -95,6 +96,7 @@ const UserList = () => {
           </p>
         </div>
       ))} */}
+      </div>
     </div>
   );
 };

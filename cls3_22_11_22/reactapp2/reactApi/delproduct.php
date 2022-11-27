@@ -10,5 +10,5 @@
    $result = mysqli_query($db_conn, "DELETE FROM products WHERE  id = '$id'");
 
    if ($result){
-    echo json_encode(["msg"=>"Succesfully Deleted Product"]);
+    echo json_encode(["msg"=>"Succesfully Deleted Product"]); 
    }
