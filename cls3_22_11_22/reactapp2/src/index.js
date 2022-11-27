@@ -13,6 +13,7 @@ import Colors from "./components/Colors/Colors";
 import LifeCycle from "./components/LifeCycle/LifeCycle";
 import UserList from "./users/UserList";
 import AllProduct from "./product/AllProduct";
+import AddProduct from "./product/AddProduct";
 
 export default function RouterApp() {
   return (
@@ -27,6 +28,7 @@ export default function RouterApp() {
           <Route path="/lifecycle" element={<LifeCycle />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/products" element={<AllProduct />} />
+          <Route path="/products/add" element={<AddProduct />} />
           <Route path="*" element={<Nopage />} />
         </Route>
       </Routes>
