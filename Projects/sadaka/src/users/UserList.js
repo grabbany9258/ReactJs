@@ -47,42 +47,63 @@ const UserList = () => {
 
   return (
     <div>
-      <div className="col-sm-8">
-        <Link to="/insert" className="btn btn-primary">
-          {" "}
-          Create User{" "}
-        </Link>
+      <div className="page-heading text-center">
 
-        <table className="table table-striped">
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Eamil</th>
-            <th>Action</th>
-          </tr>
-          {isuser.map((item, index) => (
-            <tr>
-              <td>{index + 1}</td>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-              <td>
-                <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
-                  Edit
-                </Link>
-                <span
-                  onClick={() => deleteConfirm(item.id)}
-                  className="btn
+        <div className="container zoomIn animated">
+
+          <h1 className="page-title">List of User <span className="title-under"></span></h1>
+          <p className="page-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit Necessitatibus.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div className="main-container">
+
+
+        {/* <!-- /.about-us --> */}
+
+
+        <div className="animate-onscroll fadeIn">
+          <div className="container">
+
+            <Link to="/insert" className="btn btn-primary">
+              {" "}
+              Create User{" "}
+            </Link>
+
+            <table className="table table-striped">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Eamil</th>
+                <th>Action</th>
+              </tr>
+              {isuser.map((item, index) => (
+                <tr>
+                  <td>{index + 1}</td>
+                  <td>{item.name}</td>
+                  <td>{item.email}</td>
+                  <td>
+                    <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
+                      Edit
+                    </Link>
+                    <span
+                      onClick={() => deleteConfirm(item.id)}
+                      className="btn
                 btn-outline-danger mx-2"
-                >
+                    >
 
-                  Delete
-                </span>
-              </td>
-            </tr>
-          ))}
-        </table>
+                      Delete
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </table>
 
-        {/* {isuser.map((item, index) => (
+            {/* {isuser.map((item, index) => (
         <div className="list" key={item.id}>
           <p>Name: {item.name}</p>
           <p>Email: {item.email}</p>
@@ -96,7 +117,18 @@ const UserList = () => {
           </p>
         </div>
       ))} */}
+
+          </div>
+
+
+
+        </div>
+
+
+
       </div>
+
+
     </div>
   );
 };

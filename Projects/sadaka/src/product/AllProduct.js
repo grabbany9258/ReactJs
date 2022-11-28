@@ -10,8 +10,6 @@ export default function AllProduct() {
         allprod()
     }, []);
 
-
-
     const allprod = async () => {
         axios.get("http://localhost/ReactJs/Projects/sadaka/reactApi/products/AllProduct.php")
             .then((res) => {
@@ -19,16 +17,30 @@ export default function AllProduct() {
             });
     }
 
-
-
-
     return (
-        <div className=''>
-            <h2 >All Product</h2>
-            {product.map((item, index) => (
-                <li>{item.name}</li>
-            ))}
+        <div>
+            <div className="page-heading text-center">
+                <div className="container zoomIn animated">
+                    <h1 className="page-title">ABOUT Product <span className="title-under"></span></h1>
+                    <p className="page-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit Necessitatibus.
+                    </p>
+                </div>
+            </div>
 
+            <div className="main-container">
+                <div className="our-team animate-onscroll fadeIn">
+                    <div className="container">
+                        <h2 className="title-style-1">Our Product <span className="title-under"></span></h2>
+                        <div className=''>
+                            <h2 >All Product</h2>
+                            {product.map((item, index) => (
+                                <li>{item.name}</li>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

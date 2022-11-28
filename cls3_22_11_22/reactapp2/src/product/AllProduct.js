@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 
 const AllProduct = () => {
   const [product, setProduct] = useState([]);
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f530a33ac1656acd199b5b92f13f079f24221b6
   console.log(product);
 
   useEffect(() => {

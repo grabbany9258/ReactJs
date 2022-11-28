@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
+import "./Header.css"
 
 export default function Header() {
     return (
@@ -8,7 +9,7 @@ export default function Header() {
             <header className="main-header">
 
 
-                <nav className="navbar navbar-static-top">
+                <nav className="navbar  " >
 
                     <div className="navbar-top">
 
@@ -28,11 +29,11 @@ export default function Header() {
 
                                     <ul className="list-unstyled list-inline header-social">
 
-                                        <li> <a href="#"> <i className="fa fa-facebook"></i> </a> </li>
-                                        <li> <a href="#"> <i className="fa fa-twitter"></i>  </a> </li>
-                                        <li> <a href="#"> <i className="fa fa-google"></i>  </a> </li>
-                                        <li> <a href="#"> <i className="fa fa-youtube"></i>  </a> </li>
-                                        <li> <a href="#"> <i className="fa fa fa-pinterest-p"></i>  </a> </li>
+                                        <li> <a href="abc"> <i className="fa fa-facebook"></i> </a> </li>
+                                        <li> <a href="abc"> <i className="fa fa-twitter"></i>  </a> </li>
+                                        <li> <a href="abc"> <i className="fa fa-google"></i>  </a> </li>
+                                        <li> <a href="abc"> <i className="fa fa-youtube"></i>  </a> </li>
+                                        <li> <a href="abc"> <i className="fa fa fa-pinterest-p"></i>  </a> </li>
                                     </ul>
                                     {/* <!-- /.header-social  --> */}
 
@@ -49,7 +50,7 @@ export default function Header() {
                         <div className="container">
 
                             <div className="navbar-header">
-                                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="abcnavbar" aria-expanded="false" aria-controls="navbar">
 
                                     <span className="sr-only">Toggle navigation</span>
                                     <span className="icon-bar"></span>
@@ -72,17 +73,14 @@ export default function Header() {
                                         </Link>
                                     </li>
 
-
-
                                     <li className="nav-item">
                                         <Link to="/about" className="nav-link">
                                             About us
                                         </Link>
                                     </li>
 
-
                                     <li className="has-child">
-                                        <a href="#">CAUSES</a>
+                                        <a href="abc">CAUSES</a>
 
                                         <ul className="submenu">
                                             <li className="submenu-item">
@@ -123,7 +121,7 @@ export default function Header() {
                                 </ul>
 
                             </div>
-                            {/* <!-- /#navbar --> */}
+                            {/* <!-- /abcnavbar --> */}
 
                         </div>
                         {/* <!-- /.container --> */}
