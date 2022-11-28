@@ -14,6 +14,8 @@ import LifeCycle from "./components/LifeCycle/LifeCycle";
 import UserList from "./users/UserList";
 import AllProduct from "./product/AllProduct";
 import AddProduct from "./product/AddProduct";
+import Comp1 from "./components/Comp1";
+import EditProduct from "./product/EditProduct";
 
 export default function RouterApp() {
   return (
@@ -29,6 +31,8 @@ export default function RouterApp() {
           <Route path="/users" element={<UserList />} />
           <Route path="/products" element={<AllProduct />} />
           <Route path="/products/add" element={<AddProduct />} />
+          <Route path="/comp1" element={<Comp1 />} />
+          <Route path="/products/edit/:pid" element={<EditProduct />} />
           <Route path="*" element={<Nopage />} />
         </Route>
       </Routes>

@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 
 const AllProduct = () => {
   const [product, setProduct] = useState([]);
-<<<<<<< HEAD
-
-=======
->>>>>>> 4f530a33ac1656acd199b5b92f13f079f24221b6
   console.log(product);
 
   useEffect(() => {
@@ -23,24 +19,24 @@ const AllProduct = () => {
         setProduct(res.data.datas.pr);
       });
   };
-  // //  For deleteing this part
-  // const delconfirm = (id) => {
-  //   delprod(id);
-  //   // console.log(id);
-  // };
+  //  For deleteing this part
+  const delconfirm = (id) => {
+    delprod(id);
+    // console.log(id);
+  };
 
-  // const delprod = async (id) => {
-  //   axios
-  //     .post(
-  //       "http://localhost/ReactJs/cls3_22_11_22/reactapp2/reactApi/delproduct.php",
-  //       { prodid: id }
-  //     )
-  //     .then((res) => {
-  //       // setProduct(res.data.datas.pr);
-  //       alert(res.data.msg); // akhn theke alert a msg a dibe
-  //       allprod(); //ata refresh ar jonno
-  //     });
-  // };
+  const delprod = async (id) => {
+    axios
+      .post(
+        "http://localhost/ReactJs/cls3_22_11_22/reactapp2/reactApi/delproduct.php",
+        { prodid: id }
+      )
+      .then((res) => {
+        // setProduct(res.data.datas.pr);
+        alert(res.data.msg); // akhn theke alert a msg a dibe
+        allprod(); //ata refresh ar jonno
+      });
+  };
 
   return (
     <div className="col-sm-8">
@@ -63,8 +59,13 @@ const AllProduct = () => {
               <td>{item.details}</td>
               <td>{item.price}</td>
               <td>
-                <button>Edit</button>
-                {/* <button onClick={() => delconfirm(item.id)}>Delete</button> */}
+                <Link
+                  to={`/products/edit/${item.id}`}
+                  className="btn btn-secondary"
+                >
+                  Edit Product
+                </Link>
+                <button onClick={() => delconfirm(item.id)}>Delete</button>
               </td>
             </tr>
           ))}

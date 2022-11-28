@@ -1,0 +1,5 @@
+1) editproduct.js  file
+2) index.js a route 
+3)AllProduct.js a edit link a  LInk to kore link dite hbe
+4)editproduct.js a  form banate hbe
+5)
