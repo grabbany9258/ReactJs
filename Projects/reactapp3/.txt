@@ -1,0 +1,4 @@
+1)after install app.js a bad dite hbe ajaira jinis
+2)create 2 folder components & pages
+3)pages a file bante hbe
+4) npm i react-router-dom ata install korte hbe

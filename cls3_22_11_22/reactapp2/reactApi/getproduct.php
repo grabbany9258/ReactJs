@@ -13,7 +13,7 @@ if (
             $viewjson["name"] = $row['name'];
             $viewjson["details"] = $row['details'];
             $viewjson["price"] = $row['price'];
-            $json_array["prrdata"][] = $viewjson;
+            $json_array["prdata"][] = $viewjson;
         }
         echo json_encode(["success" => true, "product" => $json_array]);
         return;
