@@ -5,7 +5,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Index />}>
-        {/* <Route index element={<Home />} /> */}
+        <Route index element={<Home />} />
       </Route>
     </Routes>
   );

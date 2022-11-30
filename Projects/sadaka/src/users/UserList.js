@@ -12,9 +12,7 @@ const UserList = () => {
   const alluser = async (ids) => {
     try {
       axios
-        .get(
-          `http://localhost/ReactJs/Projects/sadaka/reactApi/users.php`
-        )
+        .get(`http://localhost/ReactJs/Projects/sadaka/reactApi/users.php`)
         .then((res) => {
           console.log(res.data.userlist.userdata);
           setuser(res.data.userlist.userdata);
@@ -24,51 +22,46 @@ const UserList = () => {
     }
   };
 
-  const deleteConfirm = (id) => {
-    if (window.confirm("Are you sure?")) {
-      deleteUser(id);
-    }
-  };
-  const deleteUser = async (id) => {
-    try {
-      axios
-        .post(`http://localhost/ReactJs/Projects/sadaka/reactApi/users.php`, {
-          userids: id,
-        })
-        .then((res) => {
-          setuser([]);
-          alluser();
-          return;
-        });
-    } catch (error) {
-      throw error;
-    }
-  };
+  // const deleteConfirm = (id) => {
+  //   if (window.confirm("Are you sure?")) {
+  //     deleteUser(id);
+  //   }
+  // };
+  // const deleteUser = async (id) => {
+  //   try {
+  //     axios
+  //       .post(`http://localhost/ReactJs/Projects/sadaka/reactApi/users.php`, {
+  //         userids: id,
+  //       })
+  //       .then((res) => {
+  //         setuser([]);
+  //         alluser();
+  //         return;
+  //       });
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // };
 
   return (
     <div>
       <div className="page-heading text-center">
-
         <div className="container zoomIn animated">
-
-          <h1 className="page-title">List of User <span className="title-under"></span></h1>
+          <h1 className="page-title">
+            List of User <span className="title-under"></span>
+          </h1>
           <p className="page-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit Necessitatibus.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            Necessitatibus.
           </p>
-
         </div>
-
       </div>
 
       <div className="main-container">
-
-
         {/* <!-- /.about-us --> */}
-
 
         <div className="animate-onscroll fadeIn">
           <div className="container">
-
             <Link to="/insert" className="btn btn-primary">
               {" "}
               Create User{" "}
@@ -85,21 +78,22 @@ const UserList = () => {
               </thead>
               <tbody>
                 {isuser.map((item, index) => (
-
                   <tr>
-                    <td>{index + 1}</td>
+                    <td>{item.id}</td>
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>
-                      <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
+                      <Link
+                        // to={`edit/${item.id}`}
+                        className="btn btn-outline-primary"
+                      >
                         Edit
                       </Link>
                       <span
-                        onClick={() => deleteConfirm(item.id)}
+                        // onClick={() => deleteConfirm(item.id)}
                         className="btn
                 btn-outline-danger mx-2"
                       >
-
                         Delete
                       </span>
                     </td>
@@ -122,18 +116,9 @@ const UserList = () => {
           </p>
         </div>
       ))} */}
-
           </div>
-
-
-
         </div>
-
-
-
       </div>
-
-
     </div>
   );
 };
