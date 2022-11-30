@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const UserList = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     alluser();
   }, []);
 
@@ -75,32 +75,37 @@ const UserList = () => {
             </Link>
 
             <table className="table table-striped">
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Eamil</th>
-                <th>Action</th>
-              </tr>
-              {isuser.map((item, index) => (
+              <thead>
                 <tr>
-                  <td>{index + 1}</td>
-                  <td>{item.name}</td>
-                  <td>{item.email}</td>
-                  <td>
-                    <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
-                      Edit
-                    </Link>
-                    <span
-                      onClick={() => deleteConfirm(item.id)}
-                      className="btn
-                btn-outline-danger mx-2"
-                    >
-
-                      Delete
-                    </span>
-                  </td>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Eamil</th>
+                  <th>Action</th>
                 </tr>
-              ))}
+              </thead>
+              <tbody>
+                {isuser.map((item, index) => (
+
+                  <tr>
+                    <td>{index + 1}</td>
+                    <td>{item.name}</td>
+                    <td>{item.email}</td>
+                    <td>
+                      <Link to={`edit/${item.id}`} className="btn btn-outline-primary">
+                        Edit
+                      </Link>
+                      <span
+                        onClick={() => deleteConfirm(item.id)}
+                        className="btn
+                btn-outline-danger mx-2"
+                      >
+
+                        Delete
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
 
             {/* {isuser.map((item, index) => (

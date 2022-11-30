@@ -35,7 +35,7 @@ export default function AllProduct() {
                         <div className=''>
                             <h2 >All Product</h2>
                             {product.map((item, index) => (
-                                <li>{item.name}</li>
+                                <li key="{item}">{item.name}</li>
                             ))}
                         </div>
                     </div>

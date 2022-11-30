@@ -80,7 +80,7 @@ export default function Header() {
                                     </li>
 
                                     <li className="has-child">
-                                        <a href="abc">CAUSES</a>
+                                        <a href="#">CAUSES</a>
 
                                         <ul className="submenu">
                                             <li className="submenu-item">
@@ -90,7 +90,8 @@ export default function Header() {
                                             <li className="submenu-item">
                                                 <Link to="/singlecause" className="nav-link">
                                                     Single Cause
-                                                </Link></li>
+                                                </Link>
+                                            </li>
 
                                         </ul>
 
