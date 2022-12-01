@@ -99,7 +99,9 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <a href="about.html">ABOUT</a>
+                    <Link className="is-active" to="/about">
+                      About
+                    </Link>
                   </li>
                   <li className="has-child">
                     <a href="#">CAUSES</a>
