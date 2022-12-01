@@ -58,7 +58,11 @@ export default function Team() {
             >
               <div className="team-item position-relative rounded overflow-hidden">
                 <div className="overflow-hidden">
-                  <img className="img-fluid" src="img/team-1.jpg" alt="" />
+                  <img
+                    className="img-fluid"
+                    src="assets/img/team-1.jpg"
+                    alt=""
+                  />
                 </div>
                 <div className="team-text bg-light text-center p-4">
                   <h5>Full Name</h5>
@@ -83,7 +87,11 @@ export default function Team() {
             >
               <div className="team-item position-relative rounded overflow-hidden">
                 <div className="overflow-hidden">
-                  <img className="img-fluid" src="img/team-2.jpg" alt="" />
+                  <img
+                    className="img-fluid"
+                    src="assets/img/team-2.jpg"
+                    alt=""
+                  />
                 </div>
                 <div className="team-text bg-light text-center p-4">
                   <h5>Full Name</h5>
@@ -108,7 +116,11 @@ export default function Team() {
             >
               <div className="team-item position-relative rounded overflow-hidden">
                 <div className="overflow-hidden">
-                  <img className="img-fluid" src="img/team-3.jpg" alt="" />
+                  <img
+                    className="img-fluid"
+                    src="assets/img/team-3.jpg"
+                    alt=""
+                  />
                 </div>
                 <div className="team-text bg-light text-center p-4">
                   <h5>Full Name</h5>
@@ -133,7 +145,11 @@ export default function Team() {
             >
               <div className="team-item position-relative rounded overflow-hidden">
                 <div className="overflow-hidden">
-                  <img className="img-fluid" src="img/team-4.jpg" alt="" />
+                  <img
+                    className="img-fluid"
+                    src="assets/img/team-4.jpg"
+                    alt=""
+                  />
                 </div>
                 <div className="team-text bg-light text-center p-4">
                   <h5>Full Name</h5>
