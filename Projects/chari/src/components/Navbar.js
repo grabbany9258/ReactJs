@@ -91,22 +91,25 @@ export default function Navbar() {
                   Pages
                 </Link>
                 <div className="dropdown-menu m-0">
-                  <Link to="service" className="dropdown-item">
+                  <Link to="/service" className="dropdown-item">
                     Service
                   </Link>
-                  <Link to="donate" className="dropdown-item">
+                  <Link to="/donate" className="dropdown-item">
                     Donate
                   </Link>
-                  <Link to="team" className="dropdown-item">
+                  <Link to="/team" className="dropdown-item">
                     Our Team
                   </Link>
-                  <Link to="testimonial" className="dropdown-item">
+                  <Link to="/testimonial" className="dropdown-item">
                     Testimonial
                   </Link>
                 </div>
               </div>
-              <Link to="contact" className="nav-item nav-link">
+              <Link to="/contact" className="nav-item nav-link">
                 Contact
+              </Link>
+              <Link to="members" className="nav-item nav-link">
+                Members
               </Link>
             </ul>
             <div className="d-none d-lg-flex ms-2">

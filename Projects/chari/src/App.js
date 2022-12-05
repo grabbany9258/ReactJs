@@ -9,6 +9,7 @@ import Donate from "./files/Donate";
 import Team from "./files/Team";
 import Testimonial from "./files/Testimonial";
 import Contact from "./files/Contact";
+import Members from "./files/Members";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/team" element={<Team />} />
         <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/members" element={<Members />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>

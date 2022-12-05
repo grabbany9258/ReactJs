@@ -1,0 +1,10 @@
+React Modal  steps:
+	1) npx create-react-app reactjsbootstrapmodal
+	2) npm i bootstrap
+	3)npm i reactstrap
+	4)import 'bootstrap/dist/css/bootstrap.css';
+added in index.js
+	5)
+
+Data Base a Data pathate ja korte hbe:
+	1)
