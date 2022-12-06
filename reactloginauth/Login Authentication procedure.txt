@@ -1,0 +1,24 @@
+Login Authentication:
+	1) npx create-react-app reactloginauth
+	2) npm install react-router-dom
+	3) components->Dashboard.js, Preferences.js
+	4)BOotstrap CDN add korce index.html a public ar
+	5)App.js a 
+<div className="container">
+      <h1>My Application</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/preferences" element={<Preferences />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+
+	6)Login.js banate hbe.. form ante hbe getbootstrap theke.
+	7) npm install --save-dev express cors
+	8)server.js banate hbe root a , then 
+server.js a data dite hbe
+	9) then cmd open kore 
+	node server.js dite hbe. tahole token dekha jabe
+	10) Login.js a "  import PropTypes from 'prop-types';  "
+	
