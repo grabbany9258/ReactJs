@@ -10,6 +10,7 @@ import Team from "./files/Team";
 import Testimonial from "./files/Testimonial";
 import Contact from "./files/Contact";
 import Members from "./files/Members";
+import MyModal from "./components/MyModal";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/members" element={<Members />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/mymodal" element={<MyModal />} />
       </Route>
     </Routes>
   );
