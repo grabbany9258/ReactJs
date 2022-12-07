@@ -21,4 +21,9 @@ server.js a data dite hbe
 	9) then cmd open kore 
 	node server.js dite hbe. tahole token dekha jabe
 	10) Login.js a "  import PropTypes from 'prop-types';  "
-	
+	11) import PropTypes from "prop-types";
+	12) niche dite hbe 
+	Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}	13) useState ante hbe 2 ta
+ 	14)
