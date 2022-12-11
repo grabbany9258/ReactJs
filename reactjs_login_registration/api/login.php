@@ -10,27 +10,21 @@ include("db_connect.php");
 $data = file_get_contents("php://input");
 // echo $data;
 $data = json_decode($data);
-if (isset($data->fname) && ($data->fname != '')) {
+if (isset($data->email) && ($data->password != '')) {
 
-    $fname = $data->fname;
-    $lname = $data->lname;
-    $email = $data->email;
-    $password = $data->password;
+    $fname = $data->email;
+    $lname = $data->password;
 
-    $result = mysqli_query($db_conn, "SELECT * FROM registration WHERE email = '$email'");
+
+    $result = mysqli_query($db_conn, "SELECT * FROM registration WHERE email = '$email' AND password = '$password'");
+
+    $row = mysqli_fetch_assoc($result);
 
     if (mysqli_num_rows($result) > 0) {
-        echo json_encode(["duplicate" => "Email Address should be difference"]);
-    } else {
-
-        mysqli_query($db_conn, "INSERT INTO registration (fname, lname, email,password) VALUES ('$fname','$lname','$email', '$password')");
-
-        if (mysqli_affected_rows($db_conn) > 0) {
-            echo json_encode(["success" => "Registration completed"]);
-        }
+        echo json_encode(["success" => "user Exist", "user" => $row]);
     }
 } else {
-    echo json_encode(["empty" => "All data must be filled"]);
+    echo json_encode(["error" => "user dosen't exist"]);
 }
 
 
