@@ -1,4 +1,4 @@
-//ModalComponent.js
+//ModalComponent.js class base
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 

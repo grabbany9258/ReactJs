@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import axios from "axios";
 
 export default function MyModal() {
   const [info, setInfo] = useState({
@@ -18,7 +19,15 @@ export default function MyModal() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(info);
-    //toggle();
+    toggle();
+    dataSubmit();
+  }
+  function dataSubmit(res) {
+    axios
+      .post("http://localhost/ReactJs/Projects/chari/api/mymodal.php", info)
+      .then((res) => {
+        alert(res.data.msg);
+      });
   }
   return (
     <div>
@@ -54,8 +63,10 @@ export default function MyModal() {
         </div>
       </div>
       <div>
-        <h2>My Modal Button</h2>
-        <Button onClick={toggle}>Click Me</Button>
+        <h2 style={{ paddingLeft: "580px" }}>My Modal Button</h2>
+        <div style={{ paddingLeft: "655px" }}>
+          <Button onClick={toggle}>Click Me</Button>
+        </div>
         <Modal isOpen={info.modal}>
           <form onSubmit={handleSubmit}>
             {/* <h2>My Modal Button</h2> */}
