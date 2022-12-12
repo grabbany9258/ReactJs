@@ -9,19 +9,22 @@ export default function Login() {
     email: "",
     password: "",
   });
-  const changeValue = (e) => {
-    setUser({ ...user, [e.target.value]: e.target.name });
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
   const formSubmit = (e) => {
+    e.preventDefault();
     axios
       .post(
         "http://localhost/ReactJs/reactjs_login_registration/api/login.php",
         user
       )
       .then((res) => {
-        if (res.data) {
-          alert(res.data);
+        if (res.data.success) {
+          //console.log(res.data);
+          navigate("/dashboard");
         }
+        alert(res.data.msg);
       });
   };
 
@@ -44,7 +47,8 @@ export default function Login() {
                         type="email"
                         id="typeEmailX-2"
                         className="form-control form-control-lg"
-                        onChange={changeValue}
+                        onChange={handleChange}
+                        name="email"
                       />
                       <label className="form-label" for="typeEmailX-2">
                         Email
@@ -56,7 +60,8 @@ export default function Login() {
                         type="password"
                         id="typePasswordX-2"
                         className="form-control form-control-lg"
-                        onChange={changeValue}
+                        onChange={handleChange}
+                        name="password"
                       />
                       <label className="form-label" for="typePasswordX-2">
                         Password
@@ -70,7 +75,7 @@ export default function Login() {
                         type="checkbox"
                         value=""
                         id="form1Example3"
-                        onChange={changeValue}
+                        onChange={handleChange}
                       />
                       <label className="form-check-label" for="form1Example3">
                         {" "}

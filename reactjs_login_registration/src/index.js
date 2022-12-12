@@ -8,6 +8,7 @@ import App from "./App";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Dashboard from "./components/Dashboard";
 
 export default function RouterApp() {
   return (
@@ -17,6 +18,7 @@ export default function RouterApp() {
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
