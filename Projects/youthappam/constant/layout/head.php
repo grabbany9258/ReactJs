@@ -27,7 +27,7 @@
     }
 }
 </style>
-    <title>Youthappam Canteen Management System - by Mayuri K. Freelancer</title>
+    <title>Rabbany's Canteen Management System - by g_rabbany</title>
 
   <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet">
   <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />

@@ -11,7 +11,7 @@ if($_POST) {
     $reffering = $_POST['reffering']; 
         $address = $_POST['address']; 
                 $gender = $_POST['gender']; 
-                $mob_no = $_POST['mob_no']; 
+                $mob_no = $_POST['mob_no'];  
 
 
 //echo $brandId;exit;

@@ -18,11 +18,11 @@ export default function Home() {
                   <div className="row justify-content-center">
                     <div className="col-lg-7 pt-5">
                       <h1 className="display-4 text-white mb-3 animated slideInDown">
-                        Let's Change The World With Humanity
+                        Work is important but food is more important
                       </h1>
                       <p className="fs-5 text-white-50 mb-5 animated slideInDown">
-                        A penny is a lot of money, if you have not got a penny.
-                        You can make the diffrence !
+                        We used to work for leading healthy life & for making
+                        life healthy food is 1st priority!.
                       </p>
                       <a
                         className="btn btn-primary py-2 px-3 animated slideInDown"

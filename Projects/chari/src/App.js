@@ -12,8 +12,9 @@ import Contact from "./files/Contact";
 import Members from "./files/Members";
 import MyModal from "./components/MyModal";
 import Register from "./files/Register";
+import Category from "./files/Category";
 
-function App() {
+function App() { 
   return (
     <Routes>
       <Route path="/" element={<Main />}>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/mymodal" element={<MyModal />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/category" element={<Category />} />
       </Route>
     </Routes>
   );

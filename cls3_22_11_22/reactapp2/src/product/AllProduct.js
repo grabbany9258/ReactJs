@@ -56,7 +56,7 @@ const AllProduct = () => {
 
   return (
     <div className="col-sm-8">
-      <h2 className="bg-dark text-light">All Products</h2>
+      <h2 className="bg-dark text-light text-center" >All Products</h2>
       <label htmlFor="search">Search: </label>
       <input
         id="search"
@@ -90,7 +90,7 @@ const AllProduct = () => {
                   Edit
                 </Link>
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-danger mx-2"
                   onClick={() => delconfirm(item.id)}
                 >
                   Delete

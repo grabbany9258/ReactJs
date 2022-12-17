@@ -68,10 +68,7 @@ document.getElementById('time').innerHTML=today;
     <script src="assets/js/lib/html5-editor/wysihtml5-0.3.0.js"></script>
     <script src="assets/js/lib/html../assets/5-editor/bootstrap-wysihtml5.js"></script>
     <script src="assets/js/lib/html5-editor/wysihtml5-init.js"></script>
-</body>
-
-</html>
-<script>
+    <script>
 function alphaOnly(event) {
   var key = event.keyCode;
   return ((key >= 65 && key <= 90) || key == 8);
@@ -133,6 +130,12 @@ onReady(function () {
 });
 
 </script>
+<div style="font-size:12px;background:#eee;color:black;text-align:center;">
+    &copy;copyright by G_Rabbany
+</div>
+</body>
+
+</html>
 
 
 
