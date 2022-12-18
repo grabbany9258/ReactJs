@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <div>
       {/* <!-- Carousel Start --> */}
+
       <div className="container-fluid p-0 mb-5">
         <div
           id="header-carousel"
@@ -38,10 +39,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            {/* <div className="container"> */}
             <div className="carousel-item">
               <img className="w-100" src="assets/img/carousel-2.jpg" alt="" />
+
               <div className="carousel-caption">
-                <div className="container">
+                <div class="container">
                   <div className="row justify-content-center">
                     <div className="col-lg-7 pt-5">
                       <h1 className="display-4 text-white mb-3 animated slideInDown">

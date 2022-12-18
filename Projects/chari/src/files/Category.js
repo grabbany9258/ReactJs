@@ -27,7 +27,7 @@ export default function Category() {
       >
         <div className="container text-center">
           <h1 className="display-4 text-white animated slideInDown mb-4">
-            About Us
+            Category List
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
@@ -45,7 +45,7 @@ export default function Category() {
                 className="breadcrumb-item text-primary active"
                 aria-current="page"
               >
-                About Us
+                Category
               </li>
             </ol>
           </nav>
@@ -53,11 +53,29 @@ export default function Category() {
       </div>
       {/* <!-- Page Header End --> */}
 
-      <h1>
-        {category.map((item, index) => (
+      <div className="container">
+        <h1 className="textAlign: center">Category List</h1>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {category.map((item, index) => (
+              <tr key={item.id}>
+                <td>{index + 1}</td>
+                <td>{item.categories_name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {/* Direct loop diye kora hoyece list akare dekhano hoyece  */}
+        {/* {category.map((item, index) => (
           <li> {item.categories_name} </li>
-        ))}
-      </h1>
+        ))} */}
+      </div>
     </div>
   );
 }

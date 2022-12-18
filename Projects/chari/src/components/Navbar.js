@@ -51,7 +51,7 @@ export default function Navbar() {
         >
           <a href="index.html" className="navbar-brand ms-4 ms-lg-0">
             <h1 className="fw-bold text-primary m-0">
-              Rabbany's<span className="text-white">Canteen</span>
+              TCLD's<span className="text-white">Canteen</span>
             </h1>
           </a>
           <button
