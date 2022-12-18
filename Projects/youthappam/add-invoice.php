@@ -266,11 +266,10 @@ if($_GET['o'] == 'add') {
               <select class="form-control" name="paymentType" id="paymentType">
                 <option value="">~~SELECT~~</option>
                 <option value="2">Cash</option>
-                 <option value="4">Phone Pe</option>
-                <option value="5">Google Pay</option>
-                <option value="6">Amazon Pay</option>
-                <option value="1">Cheque</option>
-                <option value="3">Credit Card</option>
+                 <option value="4">Bkash Pay</option>
+                <option value="5">Nagad Pay</option>
+                <option value="1">Due </option>
+                
                
               </select>
             </div>
@@ -295,8 +294,13 @@ if($_GET['o'] == 'add') {
             <div class="col-sm-4">
               <select class="form-control" name="paymentPlace" id="paymentPlace">
                 <option value="">~~SELECT~~</option>
-                <option value="1">In India</option>
-                <option value="2">Out Of India</option>
+                <option value="1">Marketing Department</option>
+                <option value="2">Operations Department</option>
+                <option value="3">Finance Department</option>
+                <option value="4">Sales Department</option>
+                <option value="5">HRM Department</option>
+                <option value="6">IT Department</option>
+                <option value="7">Production Department</option>
               </select>
             </div>
                                                </div>

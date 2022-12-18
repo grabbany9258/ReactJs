@@ -111,10 +111,16 @@ export default function Navbar() {
               <Link to="members" className="nav-item nav-link">
                 Members
               </Link>
+              <Link to="order" className="nav-item nav-link">
+                Order Here
+              </Link>
             </ul>
             <div className="d-none d-lg-flex ms-2">
-              <a className="btn btn-outline-primary py-2 px-3" href="a">
-                Donate Now
+              <a
+                className="btn btn-outline-primary py-2 px-3"
+                href="http://localhost/ReactJs/Projects/youthappam/login.php"
+              >
+                Admin
                 <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                   <i className="fa fa-arrow-right"></i>
                 </div>

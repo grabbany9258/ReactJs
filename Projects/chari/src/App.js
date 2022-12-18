@@ -13,8 +13,9 @@ import Members from "./files/Members";
 import MyModal from "./components/MyModal";
 import Register from "./files/Register";
 import Category from "./files/Category";
+import Order from "./files/Order";
 
-function App() { 
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />}>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/mymodal" element={<MyModal />} />
         <Route path="/register" element={<Register />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/order" element={<Order />} />
       </Route>
     </Routes>
   );

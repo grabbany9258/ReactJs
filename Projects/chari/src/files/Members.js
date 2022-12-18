@@ -1,6 +1,23 @@
 import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function Members() {
+  const [member, setMember] = useState([]);
+  console.log(member);
+
+  useEffect(() => {
+    allMember();
+  }, []);
+
+  const allMember = async () => {
+    axios
+      .get("http://localhost/ReactJs/Projects/chari/api/member.php")
+      .then((res) => {
+        console.log(res.data.datas.pr);
+        setMember(res.data.datas.pr);
+      });
+  };
   return (
     <div>
       {/* <!-- Page Header Start --> */}
@@ -10,17 +27,17 @@ export default function Members() {
       >
         <div className="container text-center">
           <h1 className="display-4 text-white animated slideInDown mb-4">
-            Permanent Doners
+            Customer List
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
               <li className="breadcrumb-item">
-                <a className="text-white" href="a">
+                <a className="text-white" href="#">
                   Home
                 </a>
               </li>
               <li className="breadcrumb-item">
-                <a className="text-white" href="a">
+                <a className="text-white" href="#">
                   Pages
                 </a>
               </li>
@@ -28,13 +45,41 @@ export default function Members() {
                 className="breadcrumb-item text-primary active"
                 aria-current="page"
               >
-                Causes
+                Category
               </li>
             </ol>
           </nav>
         </div>
       </div>
       {/* <!-- Page Header End --> */}
+
+      <div className="container">
+        <h1 className="textAlign: center">Customer List</h1>
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Phone Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            {member.map((item, index) => (
+              <tr key={item.id}>
+                <td>{index + 1}</td>
+                <td>{item.employee_name}</td>
+                <td>{item.designation}</td>
+                <td>{item.phone_nb}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {/* Direct loop diye kora hoyece list akare dekhano hoyece  */}
+        {/* {category.map((item, index) => (
+          <li> {item.categories_name} </li>
+        ))} */}
+      </div>
     </div>
   );
 }

@@ -41,7 +41,7 @@ export default function UploadForm() {
       )
       .then((res) => {
         console.log(res.data);
-        alert(res.data.msg);
+        //alert(res.data.msg);
       });
   };
 

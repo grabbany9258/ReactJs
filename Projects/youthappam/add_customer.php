@@ -41,11 +41,20 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <label class="col-sm-3 control-label">Gender</label>
+                                        <label class="col-sm-3 control-label">Department</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" id="brandName" name="gender">
-                                                <option value="Female">Female</option>
-                                                <option value="Male">Male</option>
+                                            <select class="form-control" id="brandName" name="gender" >
+                                            <option value="Female" disabled selected>Select One</option> 
+                                                <option value="Female">Marketing Department</option>
+                                                <option value="Male">Operations Department</option>
+                                                <option value="Male">Finance Department</option>
+                                                <option value="Male">Sales Department</option>
+                                                <option value="Male">HRM Department</option>
+                                                <option value="Male">IT Department</option>
+                                                <option value="Male">Production Department</option>
+
+                                                
+
                                             </select>
                                         </div>
                                     </div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 08:48 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Generation Time: Dec 18, 2022 at 06:59 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,11 +41,11 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`categories_id`, `categories_name`, `categories_active`, `categories_status`) VALUES
 (1, 'Sweet', 1, 1),
 (2, 'Hot', 1, 1),
-(3, 'Vadiyalu', 1, 1),
+(3, 'Vadiyalu', 1, 2),
 (4, 'Specials', 1, 1),
-(5, 'Podulu', 1, 1),
-(6, 'Pickles', 1, 1),
-(7, 'Nashta', 1, 1),
+(5, 'Podulu', 1, 2),
+(6, 'Pickles_aminu', 1, 1),
+(7, 'Breakfast', 1, 1),
 (8, 'juce_Cold', 1, 1);
 
 -- --------------------------------------------------------
@@ -68,6 +68,26 @@ INSERT INTO `donores` (`id`, `name`, `city`) VALUES
 (16, 'Rabbany', 'Dhaka'),
 (17, 'trishu', 'Dhaka'),
 (19, 'gjsdg', 'sdg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee_list`
+--
+
+CREATE TABLE `employee_list` (
+  `id` int(11) NOT NULL,
+  `employee_name` varchar(50) NOT NULL,
+  `designation` varchar(50) NOT NULL,
+  `phone_nb` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `employee_list`
+--
+
+INSERT INTO `employee_list` (`id`, `employee_name`, `designation`, `phone_nb`) VALUES
+(1, 'Golam Rabbany', 'Manager', '01642541075');
 
 -- --------------------------------------------------------
 
@@ -219,7 +239,9 @@ INSERT INTO `register_form` (`id`, `fname`, `lname`, `email`, `password`) VALUES
 (6, 'Fayzullah', 'aman', 'fayez@gmail.com', 'abcd1234'),
 (11, 'Taskin', 'mahmud', 'taskin@gmail.com', 'abcd123'),
 (12, 'Talukdar ', 'mahadi', 'mahadi@gmail.com', 'abcd123'),
-(14, 'Mahir', 'CHowdhury', 'mahir@gmail.com', 'abcd123');
+(14, 'Mahir', 'CHowdhury', 'mahir@gmail.com', 'abcd123'),
+(15, 'xyz', 'abc', 'k@gmail.com', 'abcd'),
+(16, 'tcld', 'madam', 'madam@gmail.com', 'abcd');
 
 -- --------------------------------------------------------
 
@@ -247,7 +269,8 @@ INSERT INTO `tbl_client` (`id`, `name`, `gender`, `mob_no`, `reffering`, `addres
 (2, 'Sachin Rajjan', 'Male', '8070809805', 'Akash', 'Plot No.8, Sahajan Colon, Kolkata', '2022-09-25 07:23:34', 0),
 (3, 'Golam Rabbany', 'Male', '01642541075', '1', 'Shyamoli Dhaka-1207', '2022-12-14 02:58:05', 0),
 (4, 'Fayzullah', 'Male', '0123654893', 'Rabbany', 'Polton Dhaka-1207', '2022-12-14 05:06:37', 0),
-(5, 'xfnjdgjd', 'Female', 'vbncvn', 'vncvn', 'cvbncvn', '2022-12-14 05:44:03', 0);
+(5, 'xfnjdgjd', 'Female', 'vbncvn', 'vncvn', 'cvbncvn', '2022-12-14 05:44:03', 0),
+(6, 'golam rabbany', 'Female', '014569875', '012', 'dafgdg', '2022-12-18 12:35:32', 0);
 
 -- --------------------------------------------------------
 
@@ -300,6 +323,12 @@ ALTER TABLE `categories`
 -- Indexes for table `donores`
 --
 ALTER TABLE `donores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `employee_list`
+--
+ALTER TABLE `employee_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -367,6 +396,12 @@ ALTER TABLE `donores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
+-- AUTO_INCREMENT for table `employee_list`
+--
+ALTER TABLE `employee_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `manage_website`
 --
 ALTER TABLE `manage_website`
@@ -394,13 +429,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `register_form`
 --
 ALTER TABLE `register_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_client`
 --
 ALTER TABLE `tbl_client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_email_config`

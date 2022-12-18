@@ -32,13 +32,13 @@ if (isset($_POST['mydata']) && isset($_FILES['mydata1'])) {
     // echo json_encode("Succesfully Uploaded");
 
 
-    // This part for send data in database
+    // This part for send data in database 
 
     $host = "localhost";
     $user = "root";
     $password = "";
     $dbname = "reactjs_axios_fileupload";
-
+    $msg = [];
     $db_conn = mysqli_connect($host, $user, $password, $dbname);
 
     $sql = "insert into users (username, name, photo) values ('$username', '$name', '$photo_name')";
