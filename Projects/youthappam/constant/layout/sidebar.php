@@ -47,12 +47,12 @@
                          </ul>
                      </li>
                  <?php } ?>
-                 <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-files-o"></i><span class="hide-menu">Invoices</span></a>
+                 <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-files-o"></i><span class="hide-menu">Orders</span></a>
                      <ul aria-expanded="false" class="collapse">
 
-                         <li><a href="add-invoice.php">Add Invoice</a></li>
+                         <li><a href="add-invoice.php">Add Orders</a></li>
 
-                         <li><a href="invoice.php">Manage Invoices</a></li>
+                         <li><a href="invoice.php">Manage Orders</a></li>
                      </ul>
                  </li>
 
