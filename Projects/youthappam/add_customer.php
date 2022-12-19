@@ -43,15 +43,15 @@
                                     <div class="row">
                                         <label class="col-sm-3 control-label">Department</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" id="brandName" name="gender" >
-                                            <option value="Female" disabled selected>Select One</option> 
-                                                <option value="Female">Marketing Department</option>
-                                                <option value="Male">Operations Department</option>
-                                                <option value="Male">Finance Department</option>
-                                                <option value="Male">Sales Department</option>
-                                                <option value="Male">HRM Department</option>
-                                                <option value="Male">IT Department</option>
-                                                <option value="Male">Production Department</option>
+                                            <select class="form-control" id="brandName" name="department" >
+                                            <option value="" disabled selected>Select One</option> 
+                                                <option value="Marketing Department">Marketing Department</option>
+                                                <option value="Operations Department">Operations Department</option>
+                                                <option value="Finance Department">Finance Department</option>
+                                                <option value="sd">Sales Department</option>
+                                                <option value="hrm">HRM Department</option>
+                                                <option value="IT">IT Department</option>
+                                                <option value="pd">Production Department</option>
 
                                                 
 
@@ -81,9 +81,9 @@
 
                                 <div class="form-group">
                                     <div class="row">
-                                        <label class="col-sm-3 control-label">Address</label>
+                                        <label class="col-sm-3 control-label">Floor Nb</label>
                                         <div class="col-sm-9">
-                                            <textarea type="text" class="form-control" id="" placeholder="" name="address" autocomplete="off" required="" style="height: 150px;"></textarea>
+                                            <textarea type="text" class="form-control" id="" placeholder="" name="floor_nb" autocomplete="off" required="" style="height: 40px;"></textarea>
                                         </div>
                                     </div>
                                 </div>

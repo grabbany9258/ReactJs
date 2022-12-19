@@ -30,7 +30,7 @@ $result = $connect->query($sql);
                  <div class="card">
                             <div class="card-body">
                               
-                            <a href="add_customer.php"><button class="btn btn-primary">Add Client</button></a>
+                            <a href="add_customer.php"><button class="btn btn-primary">Add Customer</button></a>
                          
                                 <div class="table-responsive m-t-40">
                                     <table id="myTable" class="table table-bordered table-striped">
@@ -38,10 +38,10 @@ $result = $connect->query($sql);
                                             <tr>
                                               <th>#</th>
                                                 <th>Client Name</th>
-                                                <th>Gender</th>
-                                                <th>Mobile NO</th>
+                                                <th>Department</th>
+                                                <th>Mobile No</th>
                                                 <th>Reffering</th>
-                                                <th>Address</th>
+                                                <th>Floor Nb</th>
                                                 <th>Action</th>
                                             </tr>
                                        </thead>
@@ -53,12 +53,12 @@ foreach ($result as $row) {
                                         <tr>
                                             <td><?php echo$no; ?></td>
                                             <td><?php echo $row['name'] ?></td>
-                                            <td><?php echo $row['gender'] ?></td>
+                                            <td><?php echo $row['department'] ?></td>
                                               <td><?php echo $row['mob_no'] ?></td>
                                             <td><?php echo $row['reffering'] ?></td>
-                                            <td><?php echo $row['address'] ?></td>
+                                            <td><?php echo $row['floor_nb'] ?></td>
                                           
-                                            <td>
+                                            <td> 
             
                                                 <a href="editcustomer.php?id=<?php echo $row['id']?>"><button type="button" class="btn btn-xs btn-primary" ><i class="fa fa-pencil"></i></button></a>
                                               

@@ -7,15 +7,16 @@ $valid['success'] = array('success' => false, 'messages' => array());
 if ($_POST) {
 	extract($_POST);
 	$name = $_POST['name'];
+	$department = $_POST['department'];
 	$reffering = $_POST['reffering'];
-	$address = $_POST['address'];
-	$gender = $_POST['gender'];
+	$floor_nb = $_POST['floor_nb'];
+	
 
 
 
 
 
-	$sql = "INSERT INTO `tbl_client`(`name`, `mob_no`, `reffering`, `address`, `gender`)VALUES ('$name', '$mob_no', '$reffering', '$address','$gender')";
+	$sql = "INSERT INTO `tbl_client`(`name`, `department`, `reffering`, `mob_no`,`floor_nb`)VALUES ('$name', '$department', '$reffering', '$mob_no','$floor_nb')";
 
 	if ($connect->query($sql) === TRUE) {
 		$valid['success'] = true;

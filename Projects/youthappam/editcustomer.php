@@ -53,44 +53,54 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-3 control-label">Gender</label>
-                                                <div class="col-sm-9">
-                                                                                                  <select class="form-control" id="brandName" name="gender">
-                                                                                                    <option value="Female" <?php if($result['gender']=="Female"){ echo "selected";}?>>Female</option>
-                                                                                                    <option value="Male" <?php if($result['gender']=="Male"){ echo "selected";}?>>Male</option>
-</select></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-3 control-label">Mobile No
-</label>
-                                                <div class="col-sm-9">
-                        <input type="text" class="form-control" id="" placeholder="" name="mob_no" autocomplete="off" required="" value="<?php  echo$result['mob_no'];?>" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-3 control-label">Reffering</label>
-                                                <div class="col-sm-9">
-                                                                                                    <input type="text" class="form-control" id="" placeholder="" name="reffering" autocomplete="off" required="" value="<?php  echo$result['reffering'];?>" />
 
-                                            </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">Department</label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" id="brandName" name="department" value="<?php  echo$result['department'];?>">
+                                            <option value="" disabled selected>Select One</option> 
+                                                <option value="Marketing Department">Marketing Department</option>
+                                                <option value="Operations Department">Operations Department</option>
+                                                <option value="Finance Department">Finance Department</option>
+                                                <option value="Sales Department">Sales Department</option>
+                                                <option value="HRM Department">HRM Department</option>
+                                                <option value="IT Department">IT Department</option>
+                                                <option value="Production Department">Production Department</option>                             
+                                            </select>
                                         </div>
                                     </div>
-                                     <div class="form-group">
-                                            <div class="row">
-                                                <label class="col-sm-3 control-label">Address</label>
-                                                <div class="col-sm-9">
-                                                                                                    <textarea type="text" class="form-control" id="" placeholder="" name="address" autocomplete="off" required="" style="height: 150px;"><?php  echo$result['address'];?></textarea>
+                                </div>
 
-                                            </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">Mobile No
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="" placeholder="" name="mob_no" autocomplete="off" required="" value="<?php  echo $result['mob_no'];?>"/>
                                         </div>
                                     </div>
-                                  
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">Reffering</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="" placeholder="" name="reffering" autocomplete="off" required="" value="<?php  echo $result['reffering'];?>" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">Floor Nb</label>
+                                        <div class="col-sm-9">
+                                            <textarea type="text" class="form-control" id="" placeholder="" name="floor_nb" autocomplete="off" required="off"  style="height: 40px;"><?php echo $result['floor_nb'];?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
 
                                         <button type="submit" name="create" id="createBrandBtn" class="btn btn-primary btn-flat m-b-30 m-t-30">Update</button>
                                     </form>
@@ -107,3 +117,7 @@
 <?php include('./constant/layout/footer.php');?>
 
 
+
+                                                                                                    <input type="text" class="form-control" id="" placeholder="" name="reffering" autocomplete="off" required="" value="<?php  echo$result['reffering'];?>" />
+
+                                                                                                    <textarea type="text" class="form-control" id="" placeholder="" name="address" autocomplete="off" required="" style="height: 150px;"><?php  echo$result['address'];?></textarea

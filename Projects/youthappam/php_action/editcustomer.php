@@ -9,13 +9,13 @@ if($_POST) {
 //echo "123";exit;
 	 $name = $_POST['name']; 
     $reffering = $_POST['reffering']; 
-        $address = $_POST['address']; 
-                $gender = $_POST['gender']; 
+        $floor_nb = $_POST['floor_nb']; 
+                $department = $_POST['department']; 
                 $mob_no = $_POST['mob_no'];  
 
 
 //echo $brandId;exit;
-	$sql = "UPDATE tbl_client SET name = '$name', reffering = '$reffering',address = '$address', gender = '$gender',mob_no = '$mob_no' WHERE id = '$id'";
+	$sql = "UPDATE tbl_client SET name = '$name', reffering = '$reffering',floor_nb = '$floor_nb', department = '$department',mob_no = '$mob_no' WHERE id = '$id'";
 //echo $sql;exit;
 	if($connect->query($sql) === TRUE) {
 	 	$valid['success'] = true;
