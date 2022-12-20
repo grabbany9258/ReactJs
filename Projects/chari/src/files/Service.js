@@ -44,12 +44,7 @@ export default function Service() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
-              What We Do
-            </div>
-            <h1 className="display-6 mb-5">
-              Learn More What We Do And Get Involved
-            </h1>
+            <h1 className="display-6 mb-5">Menu List</h1>
           </div>
           <div className="row g-4 justify-content-center">
             <div

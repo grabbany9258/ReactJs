@@ -29,7 +29,7 @@ export default function Home() {
                         className="btn btn-primary py-2 px-3 animated slideInDown"
                         href="a"
                       >
-                        Learn More
+                        See More
                         <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                           <i className="fa fa-arrow-right"></i>
                         </div>
@@ -48,17 +48,19 @@ export default function Home() {
                   <div className="row justify-content-center">
                     <div className="col-lg-7 pt-5">
                       <h1 className="display-4 text-white mb-3 animated slideInDown">
-                        Let's Save More Lifes With Our Helping Hand
+                        Let's eat Something to keep your body & Mind Fit for
+                        Work
                       </h1>
                       <p className="fs-5 text-white-50 mb-5 animated slideInDown">
-                        Saving life is to Almighty but as a creation of him its
-                        just our duty to help other creation.
+                        Do you like your work ? Is your answer is "Yes". Then
+                        Take a suggetion: "Take some meal as you can keep fit
+                        for assigning task"
                       </p>
                       <a
                         className="btn btn-primary py-2 px-3 animated slideInDown"
                         href="a"
                       >
-                        Learn More
+                        See More
                         <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                           <i className="fa fa-arrow-right"></i>
                         </div>
@@ -112,21 +114,24 @@ export default function Home() {
                   alt=""
                   style={{ objectFit: "cover" }}
                 />
-                <img
-                  className="position-absolute top-0 end-0 bg-white ps-2 pb-2"
-                  src="assets/img/about-2.jpg"
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
               </div>
             </div>
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
               <div className="h-100">
-                <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+                <div
+                  className=" rounded-pill text-bg-info text-primary display-6  text-center "
+                  style={{
+                    width: "280px",
+                    height: "45px",
+                    marginLeft: "100px",
+                    marginBottom: "20px",
+                  }}
+                >
                   About Us
                 </div>
-                <h1 className="display-6 mb-5">
-                  We Help People In Need Around The World
+                <h1 className="display-8 mb-5">
+                  Read More About Our Menu and Come and take a visit to Our
+                  Canteen For TEST .
                 </h1>
                 <div className="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
                   <p className="text-dark mb-2">
@@ -141,7 +146,7 @@ export default function Home() {
                   sed stet lorem sit clita duo justo magna dolore erat amet
                 </p>
                 <a className="btn btn-primary py-2 px-3 me-3" href="a">
-                  Learn More
+                  Read More
                   <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>
@@ -167,12 +172,18 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
-              Feature Causes
+            <div
+              className="d-inline-block rounded-pill bg-info text-primary display-6"
+              style={{
+                width: "280px",
+                height: "50px",
+                marginLeft: "50px",
+                marginBottom: "20px",
+              }}
+            >
+              Featured Foods
             </div>
-            <h1 className="display-6 mb-5">
-              Every Child Deserves The Opportunity To Learn
-            </h1>
+            <h1 className="display-6 mb-5">Food gives us energy for work.</h1>
           </div>
           <div className="row g-4 justify-content-center">
             <div
@@ -184,7 +195,7 @@ export default function Home() {
                   <div className="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
                     <small>Education</small>
                   </div>
-                  <h5 className="mb-3">Education For African Children</h5>
+                  <h5 className="mb-3">Food Must be Qualityful</h5>
                   <p>
                     Tempor erat elitr rebum at clita dolor diam ipsum sit diam
                     amet diam et eos
@@ -192,10 +203,10 @@ export default function Home() {
                   <div className="causes-progress bg-light p-3 pt-2">
                     <div className="d-flex justify-content-between">
                       <p className="text-dark">
-                        $10,000 <small className="text-body">Goal</small>
+                        Tk 150 <small className="text-body">Price</small>
                       </p>
                       <p className="text-dark">
-                        $9,542 <small className="text-body">Raised</small>
+                        <small className="text-body"></small>
                       </p>
                     </div>
                     <div className="progress">
@@ -206,7 +217,7 @@ export default function Home() {
                         aria-valuemin="0"
                         aria-valuemax="100"
                       >
-                        <span>90%</span>
+                        <span></span>
                       </div>
                     </div>
                   </div>
@@ -217,14 +228,14 @@ export default function Home() {
                     src="assets/img/courses-1.jpg"
                     alt=""
                   />
-                  <div className="causes-overlay">
+                  {/* <div className="causes-overlay">
                     <a className="btn btn-outline-primary" href="a">
                       Read More
                       <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                         <i className="fa fa-arrow-right"></i>
                       </div>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -235,9 +246,9 @@ export default function Home() {
               <div className="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
                 <div className="text-center p-4 pt-0">
                   <div className="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                    <small>Pure Water</small>
+                    <small>Lunch</small>
                   </div>
-                  <h5 className="mb-3">Ensure Pure Drinking Water</h5>
+                  <h5 className="mb-3">Ensure Pure Food</h5>
                   <p>
                     Tempor erat elitr rebum at clita dolor diam ipsum sit diam
                     amet diam et eos
@@ -245,10 +256,10 @@ export default function Home() {
                   <div className="causes-progress bg-light p-3 pt-2">
                     <div className="d-flex justify-content-between">
                       <p className="text-dark">
-                        $10,000 <small className="text-body">Goal</small>
+                        Tk 300 <small className="text-body">Price</small>
                       </p>
                       <p className="text-dark">
-                        $9,542 <small className="text-body">Raised</small>
+                        <small className="text-body"></small>
                       </p>
                     </div>
                     <div className="progress">
@@ -259,7 +270,7 @@ export default function Home() {
                         aria-valuemin="0"
                         aria-valuemax="100"
                       >
-                        <span>90%</span>
+                        <span></span>
                       </div>
                     </div>
                   </div>
@@ -270,14 +281,14 @@ export default function Home() {
                     src="assets/img/courses-2.jpg"
                     alt=""
                   />
-                  <div className="causes-overlay">
+                  {/* <div className="causes-overlay">
                     <a className="btn btn-outline-primary" href="a">
                       Read More
                       <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                         <i className="fa fa-arrow-right"></i>
                       </div>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -288,9 +299,9 @@ export default function Home() {
               <div className="causes-item d-flex flex-column bg-white border-top border-5 border-primary rounded-top overflow-hidden h-100">
                 <div className="text-center p-4 pt-0">
                   <div className="d-inline-block bg-primary text-white rounded-bottom fs-5 pb-1 px-3 mb-4">
-                    <small>Healthy Life</small>
+                    <small>Snacks</small>
                   </div>
-                  <h5 className="mb-3">Ensure Medical Treatment</h5>
+                  <h5 className="mb-3">Ensure Healthy Snacks</h5>
                   <p>
                     Tempor erat elitr rebum at clita dolor diam ipsum sit diam
                     amet diam et eos
@@ -298,10 +309,10 @@ export default function Home() {
                   <div className="causes-progress bg-light p-3 pt-2">
                     <div className="d-flex justify-content-between">
                       <p className="text-dark">
-                        $10,000 <small className="text-body">Goal</small>
+                        Tk 50 <small className="text-body">Price</small>
                       </p>
                       <p className="text-dark">
-                        $9,542 <small className="text-body">Raised</small>
+                        <small className="text-body"></small>
                       </p>
                     </div>
                     <div className="progress">
@@ -312,7 +323,7 @@ export default function Home() {
                         aria-valuemin="0"
                         aria-valuemax="100"
                       >
-                        <span>90%</span>
+                        <span></span>
                       </div>
                     </div>
                   </div>
@@ -347,11 +358,19 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+            <div
+              className="d-inline-block rounded-pill bg-info text-primary display-6"
+              style={{
+                width: "280px",
+                height: "50px",
+                marginLeft: "50px",
+                marginBottom: "20px",
+              }}
+            >
               What We Do
             </div>
             <h1 className="display-6 mb-5">
-              Learn More What We Do And Get Involved
+              Here We are just to provide Canteen Service
             </h1>
           </div>
           <div className="row g-4 justify-content-center">
@@ -365,13 +384,13 @@ export default function Home() {
                   src="assets/img/icon-1.png"
                   alt=""
                 />
-                <h4 className="mb-3">Child Education</h4>
+                <h4 className="mb-3">Breakfast Tea</h4>
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
                 </p>
                 <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
+                  Details
                   <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>
@@ -388,13 +407,13 @@ export default function Home() {
                   src="assets/img/icon-2.png"
                   alt=""
                 />
-                <h4 className="mb-3">Medical Treatment</h4>
+                <h4 className="mb-3">Lunch Box</h4>
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
                 </p>
                 <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
+                  Details
                   <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>
@@ -411,13 +430,13 @@ export default function Home() {
                   src="assets/img/icon-3.png"
                   alt=""
                 />
-                <h4 className="mb-3">Pure Drinking Water</h4>
+                <h4 className="mb-3">Evening Snacks</h4>
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
                 </p>
                 <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
+                  Details
                   <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>
@@ -438,11 +457,11 @@ export default function Home() {
         <div className="container py-5">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-              <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
-                Donate Now
+              <div className="d-inline-block rounded-pill bg-info text-primary py-1 px-3 mb-3">
+                Order Now
               </div>
               <h1 className="display-6 text-white mb-5">
-                Thanks For The Results Achieved With You
+                For Guest Hospitality You can call us directly
               </h1>
               <p className="text-white-50 mb-0">
                 Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
@@ -453,6 +472,7 @@ export default function Home() {
             <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
               <div className="h-100 bg-white p-5">
                 <form>
+                  <h3>Contact Us Directly</h3>
                   <div className="row g-3">
                     <div className="col-12">
                       <div className="form-floating">
@@ -462,7 +482,7 @@ export default function Home() {
                           id="name"
                           placeholder="Your Name"
                         />
-                        {/* <label for="name">Your Name</label> */}
+                        <label for="name">Your Name</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -473,7 +493,7 @@ export default function Home() {
                           id="email"
                           placeholder="Your Email"
                         />
-                        <label for="email">Your Email</label>
+                        <label for="email">Your Order Menu</label>
                       </div>
                     </div>
                     <div className="col-12">
@@ -486,7 +506,7 @@ export default function Home() {
                           checked
                         />
                         <label className="btn btn-light py-3" for="btnradio1">
-                          $10
+                          Price
                         </label>
 
                         <input
@@ -496,7 +516,7 @@ export default function Home() {
                           id="btnradio2"
                         />
                         <label className="btn btn-light py-3" for="btnradio2">
-                          $20
+                          view
                         </label>
 
                         <input
@@ -506,7 +526,7 @@ export default function Home() {
                           id="btnradio3"
                         />
                         <label className="btn btn-light py-3" for="btnradio3">
-                          $30
+                          view
                         </label>
                       </div>
                     </div>
@@ -515,7 +535,7 @@ export default function Home() {
                         className="btn btn-primary px-5"
                         style={{ height: "60px" }}
                       >
-                        Donate Now
+                        Call Now
                         <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
                           <i className="fa fa-arrow-right"></i>
                         </div>
@@ -538,12 +558,18 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+            <div
+              className="d-inline-block rounded-pill bg-info text-primary display-6"
+              style={{
+                width: "280px",
+                height: "50px",
+                marginLeft: "50px",
+                marginBottom: "20px",
+              }}
+            >
               Team Members
             </div>
-            <h1 className="display-6 mb-5">
-              Let's Meet With Our Ordinary Soldiers
-            </h1>
+            <h1 className="display-6 mb-5">Let's Meet With Our Director</h1>
           </div>
           <div className="row g-4">
             <div
@@ -675,11 +701,19 @@ export default function Home() {
             data-wow-delay="0.1s"
             style={{ maxWidth: "500px" }}
           >
-            <div className="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">
+            <div
+              className="d-inline-block rounded-pill bg-info text-primary display-6"
+              style={{
+                width: "280px",
+                height: "50px",
+                marginLeft: "50px",
+                marginBottom: "20px",
+              }}
+            >
               Testimonial
             </div>
             <h1 className="display-6 mb-5">
-              Trusted By Thousands Of People And Nonprofits
+              Trusted By TCLD's every Employeer & Employee
             </h1>
           </div>
           <div
