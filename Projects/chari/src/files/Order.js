@@ -15,6 +15,7 @@ export default function Order() {
     axios
       .post(
         "http://localhost/ReactJs/Projects/chari/api/registration.php",
+        // "api/registration.php",
         info
       )
       .then((res) => {
@@ -34,7 +35,7 @@ export default function Order() {
       >
         <div className="container text-center">
           <h1 className="display-4 text-white animated slideInDown mb-4">
-            Register Here
+            Order Here
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">

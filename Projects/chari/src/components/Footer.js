@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
               <h1 className="fw-bold text-primary mb-4">
-                Sadaka<span className="text-white">Team</span>
+                TCLD's<span className="text-white">Canteen</span>
               </h1>
               <p>
                 It's a non profitable organization..just to help other people
@@ -43,7 +43,7 @@ export default function Footer() {
                 <i className="fa fa-phone-alt me-3"></i>+880 164 254 1075
               </p>
               <p>
-                <i className="fa fa-envelope me-3"></i>info@sadaka.com
+                <i className="fa fa-envelope me-3"></i>info@tcld.com
               </p>
             </div>
             <div className="col-lg-3 col-md-6">

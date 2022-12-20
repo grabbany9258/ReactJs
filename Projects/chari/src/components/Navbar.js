@@ -94,22 +94,22 @@ export default function Navbar() {
                   <Link to="/service" className="dropdown-item">
                     Service
                   </Link>
-                  <Link to="/donate" className="dropdown-item">
-                    Donate
+                  <Link to="/category" className="dropdown-item">
+                    Category
                   </Link>
                   <Link to="/team" className="dropdown-item">
                     Our Team
                   </Link>
-                  <Link to="/testimonial" className="dropdown-item">
-                    Testimonial
+                  <Link to="/register" className="dropdown-item">
+                    Register-Form
                   </Link>
                 </div>
               </div>
               <Link to="/contact" className="nav-item nav-link">
                 Contact
               </Link>
-              <Link to="members" className="nav-item nav-link">
-                Members
+              <Link to="customer" className="nav-item nav-link">
+                Customers List
               </Link>
               <Link to="order" className="nav-item nav-link">
                 Order Here
@@ -118,7 +118,8 @@ export default function Navbar() {
             <div className="d-none d-lg-flex ms-2">
               <a
                 className="btn btn-outline-primary py-2 px-3"
-                href="http://localhost/ReactJs/Projects/youthappam/login.php"
+                href="http://localhost/ReactJs/Projects/chari/youthappam/login.php"
+                // href="youthappam/login.php"
               >
                 Admin
                 <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">

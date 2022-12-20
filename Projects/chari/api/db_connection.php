@@ -6,6 +6,7 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 $db_conn = mysqli_connect("localhost", "root", "", "youthappam");
+// $db_conn = mysqli_connect("localhost", "u318076185_grbreact", "|3MZM>*mYs3", "u318076185_grbreact");
 
 // Check connection
 if ($db_conn === false) {

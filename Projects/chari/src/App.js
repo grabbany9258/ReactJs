@@ -9,7 +9,7 @@ import Donate from "./files/Donate";
 import Team from "./files/Team";
 import Testimonial from "./files/Testimonial";
 import Contact from "./files/Contact";
-import Members from "./files/Members";
+import Customers from "./files/Customer";
 import MyModal from "./components/MyModal";
 import Register from "./files/Register";
 import Category from "./files/Category";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/team" element={<Team />} />
         <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/members" element={<Members />} />
+        <Route path="/customer" element={<Customers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mymodal" element={<MyModal />} />
         <Route path="/register" element={<Register />} />
