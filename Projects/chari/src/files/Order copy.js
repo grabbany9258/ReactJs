@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function Register() {
+export default function Order() {
   const navigate = useNavigate();
   const [info, setInfo] = useState({});
 
@@ -14,8 +14,8 @@ export default function Register() {
     e.preventDefault();
     axios
       .post(
-        // "http://localhost/ReactJs/Projects/chari/api/registration.php",
-        "api/registration.php",
+        // "http://localhost/ReactJs/Projects/chari/api/order.php",
+        "api/order.php",
         info
       )
       .then((res) => {
@@ -35,7 +35,7 @@ export default function Register() {
       >
         <div className="container text-center">
           <h1 className="display-4 text-white animated slideInDown mb-4">
-            Register Here
+            Order Here
           </h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
@@ -76,7 +76,7 @@ export default function Register() {
                     <div className="row justify-content-center">
                       <div className="col-sm-8 ">
                         <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                          Donore Register Form
+                          Order Form
                         </p>
 
                         <form className="mx-1 mx-md-4" onSubmit={formSubmit}>

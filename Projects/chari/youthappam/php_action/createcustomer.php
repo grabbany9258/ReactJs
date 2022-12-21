@@ -10,7 +10,7 @@ if ($_POST) {
 	$department = $_POST['department'];
 	$reffering = $_POST['reffering'];
 	$floor_nb = $_POST['floor_nb'];
-	
+
 
 
 

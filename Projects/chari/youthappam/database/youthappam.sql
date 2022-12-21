@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2022 at 06:59 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Generation Time: Dec 21, 2022 at 04:43 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -118,6 +118,28 @@ INSERT INTO `manage_website` (`id`, `title`, `short_title`, `logo`, `footer`, `c
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `menu_list`
+--
+
+CREATE TABLE `menu_list` (
+  `id` int(11) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `menu_list`
+--
+
+INSERT INTO `menu_list` (`id`, `image`, `name`, `description`) VALUES
+(1, 'assets/img/icon-1.png', 'Morning Tea', 'Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.'),
+(2, 'icon-2.png', 'Lunch Box', 'Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.'),
+(3, 'icon-3.png', 'Evening Snacks', 'Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
@@ -150,7 +172,8 @@ INSERT INTO `orders` (`order_id`, `order_date`, `client_name`, `client_contact`,
 (1, '2022-09-25', '1', '8090809080', '846.00', '152.28', '998.28', '5', '993.28', '993', '0.28', 2, 1, 1, '152.28', 1, 1, ''),
 (2, '2022-09-25', '1', '8090809080', '1050.00', '189.00', '1239.00', '', '1239.00', '1239', '0.00', 2, 1, 1, '189.00', 1, 1, ''),
 (3, '2022-09-25', '1', '8090809080', '430.00', '77.40', '507.40', '', '507.40', '507', '0.40', 4, 1, 1, '77.40', 1, 1, ''),
-(4, '2022-12-14', '', '01642541075', '175.00', '31.50', '206.50', '20', '186.50', '190', '-3.50', 2, 1, 1, '31.50', 1, 1, '');
+(4, '2022-12-14', '', '01642541075', '175.00', '31.50', '206.50', '20', '186.50', '190', '-3.50', 2, 1, 1, '31.50', 1, 1, ''),
+(5, '2022-12-20', 'Anamul', '01924738054', 'Goru MAngsho', '', '', '', '', '', '', 0, 0, 0, '', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -212,7 +235,8 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_image`, `brand_id`
 (6, 'Biyyam Pindi Vadiyalu', '', 0, 3, '545', '170', 2, 1),
 (7, 'Masala dosa', '', 0, 2, '341', '180', 1, 1),
 (8, 'Chicken 65', '', 0, 2, '440', '222', 1, 1),
-(9, 'Idli Sambhar', '', 0, 4, '432', '70', 1, 1);
+(9, 'Idli Sambhar', '', 0, 4, '432', '70', 1, 1),
+(10, 'Goru Mangsho', '', 0, 2, '1', '250', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -241,7 +265,8 @@ INSERT INTO `register_form` (`id`, `fname`, `lname`, `email`, `password`) VALUES
 (12, 'Talukdar ', 'mahadi', 'mahadi@gmail.com', 'abcd123'),
 (14, 'Mahir', 'CHowdhury', 'mahir@gmail.com', 'abcd123'),
 (15, 'xyz', 'abc', 'k@gmail.com', 'abcd'),
-(16, 'tcld', 'madam', 'madam@gmail.com', 'abcd');
+(16, 'tcld', 'madam', 'madam@gmail.com', 'abcd'),
+(17, 'Arif ', 'ikbal', 'arif@gmail.com', 'abcd');
 
 -- --------------------------------------------------------
 
@@ -252,10 +277,10 @@ INSERT INTO `register_form` (`id`, `fname`, `lname`, `email`, `password`) VALUES
 CREATE TABLE `tbl_client` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL,
-  `gender` varchar(150) NOT NULL,
+  `department` varchar(150) NOT NULL,
   `mob_no` varchar(150) NOT NULL,
   `reffering` varchar(150) NOT NULL,
-  `address` varchar(250) NOT NULL,
+  `floor_nb` varchar(250) NOT NULL,
   `created_date_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `delete_status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -264,13 +289,15 @@ CREATE TABLE `tbl_client` (
 -- Dumping data for table `tbl_client`
 --
 
-INSERT INTO `tbl_client` (`id`, `name`, `gender`, `mob_no`, `reffering`, `address`, `created_date_time`, `delete_status`) VALUES
-(1, 'Rammolli Kallathil', 'Male', '8090809080', 'Subodh', 'Old Kanakapura Rd, Basavanagudi, Bengaluru, Karnataka 560004', '2022-09-25 05:32:57', 0),
-(2, 'Sachin Rajjan', 'Male', '8070809805', 'Akash', 'Plot No.8, Sahajan Colon, Kolkata', '2022-09-25 07:23:34', 0),
-(3, 'Golam Rabbany', 'Male', '01642541075', '1', 'Shyamoli Dhaka-1207', '2022-12-14 02:58:05', 0),
-(4, 'Fayzullah', 'Male', '0123654893', 'Rabbany', 'Polton Dhaka-1207', '2022-12-14 05:06:37', 0),
-(5, 'xfnjdgjd', 'Female', 'vbncvn', 'vncvn', 'cvbncvn', '2022-12-14 05:44:03', 0),
-(6, 'golam rabbany', 'Female', '014569875', '012', 'dafgdg', '2022-12-18 12:35:32', 0);
+INSERT INTO `tbl_client` (`id`, `name`, `department`, `mob_no`, `reffering`, `floor_nb`, `created_date_time`, `delete_status`) VALUES
+(3, 'Golam Rabbany', 'IT Department', '01642541075', 'Maruf', '2nd floor', '2022-12-20 03:05:29', 0),
+(4, 'Fayzullah Aman', 'Marketing Department', '01236548933', 'Rabbany', '3rd Floor', '2022-12-20 03:05:58', 0),
+(6, 'Mahmud Hasan', 'Operations Department', '0145698756', 'Liton', '4th Floor', '2022-12-20 03:06:39', 0),
+(7, 'Trishna Akter', 'Finance Department', '01533308717', 'kamal', '5th Floor', '2022-12-20 03:07:04', 0),
+(8, 'Nasima Akter', 'Sales Department', '0123654896', 'kamini', '6th Floor', '2022-12-20 03:07:35', 0),
+(9, 'Ruhul Amin', 'HRM Department', '0123654862', 'Abid', '2nd floor', '2022-12-20 03:07:58', 0),
+(12, 'mahir', 'Finance Department', '01236548', 'sfj', '2nd floor', '2022-12-19 04:00:45', 1),
+(14, 'Maruf Waliullah', 'Production Department', '01716596589', 'ruhi', '3rd floor', '2022-12-20 03:08:18', 0);
 
 -- --------------------------------------------------------
 
@@ -335,6 +362,12 @@ ALTER TABLE `employee_list`
 -- Indexes for table `manage_website`
 --
 ALTER TABLE `manage_website`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `menu_list`
+--
+ALTER TABLE `menu_list`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -408,10 +441,16 @@ ALTER TABLE `manage_website`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `menu_list`
+--
+ALTER TABLE `menu_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `order_item`
@@ -423,19 +462,19 @@ ALTER TABLE `order_item`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `register_form`
 --
 ALTER TABLE `register_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `tbl_client`
 --
 ALTER TABLE `tbl_client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_email_config`

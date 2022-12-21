@@ -12,8 +12,8 @@ export default function Customers() {
 
   const allCustomer = async () => {
     axios
-      .get("http://localhost/ReactJs/Projects/chari/api/customer.php")
-      // .get("api/customer.php")
+      // .get("http://localhost/ReactJs/Projects/chari/api/customer.php")
+      .get("api/customer.php")
       .then((res) => {
         console.log(res.data.datas.pr);
         setCustomer(res.data.datas.pr);
@@ -55,23 +55,30 @@ export default function Customers() {
       {/* <!-- Page Header End --> */}
 
       <div className="container">
-        <h1 className="textAlign: center">Customer List</h1>
-        <table className="table table-striped">
+        <h1
+          className=""
+          style={{ textAlign: "center", margin: "30px 0px 30px " }}
+        >
+          Customer List
+        </h1>
+        <table className="table table-bordered table-striped text-center">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Designation</th>
-              <th>Phone Number</th>
+              <th>SL</th>
+              <th>Customer Name</th>
+              <th>Department</th>
+              <th>Mobile Number</th>
+              <th>Floor Number</th>
             </tr>
           </thead>
           <tbody>
             {customer.map((item, index) => (
               <tr key={item.id}>
                 <td>{index + 1}</td>
-                <td>{item.employee_name}</td>
-                <td>{item.designation}</td>
-                <td>{item.phone_nb}</td>
+                <td>{item.name}</td>
+                <td>{item.department}</td>
+                <td>{item.mob_no}</td>
+                <td>{item.floor_nb}</td>
               </tr>
             ))}
           </tbody>

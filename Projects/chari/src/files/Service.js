@@ -1,6 +1,25 @@
 import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export default function Service() {
+  const [service, setService] = useState([]);
+  console.log(service);
+
+  useEffect(() => {
+    allService();
+  }, []);
+
+  const allService = async () => {
+    axios
+      // .get("http://localhost/ReactJs/Projects/chari/api/service.php")
+      .get("api/service.php")
+      .then((res) => {
+        console.log(res.data.datas.pr);
+        setService(res.data.datas.pr);
+      });
+  };
+
   return (
     <div>
       {/* <!-- Page Header Start --> */}
@@ -51,24 +70,24 @@ export default function Service() {
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.1s"
             >
-              <div className="service-item bg-white text-center h-100 p-4 p-xl-5">
-                <img
-                  className="img-fluid mb-4"
-                  src="assets/img/icon-1.png"
-                  alt=""
-                />
-                <h4 className="mb-3">Child Education</h4>
-                <p className="mb-4">
-                  Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
-                  diam justo sed vero dolor duo.
-                </p>
-                <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
-                  <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                    <i className="fa fa-arrow-right"></i>
-                  </div>
-                </a>
-              </div>
+              {service.map((item, index) => (
+                <div className="service-item bg-white text-center h-100 p-4 p-xl-5">
+                  <img
+                    className="img-fluid mb-4"
+                    src="assets/img/icon-1.png"
+                    alt=""
+                  />
+                  {/* <h4 className="mb-3">Morning Tea</h4> */}
+                  <h4 className="mb-3">{item.name}</h4>
+                  <p className="mb-4">{item.description}</p>
+                  <a className="btn btn-outline-primary px-3" href="a">
+                    Details
+                    <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                      <i className="fa fa-arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              ))}
             </div>
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
@@ -80,13 +99,13 @@ export default function Service() {
                   src="assets/img/icon-2.png"
                   alt=""
                 />
-                <h4 className="mb-3">Medical Treatment</h4>
+                <h4 className="mb-3">Lunch Box</h4>
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
                 </p>
                 <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
+                  Details
                   <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>
@@ -103,13 +122,13 @@ export default function Service() {
                   src="assets/img/icon-3.png"
                   alt=""
                 />
-                <h4 className="mb-3">Pure Drinking Water</h4>
+                <h4 className="mb-3">Evening Snacks</h4>
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
                 </p>
                 <a className="btn btn-outline-primary px-3" href="a">
-                  Learn More
+                  Details
                   <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                     <i className="fa fa-arrow-right"></i>
                   </div>

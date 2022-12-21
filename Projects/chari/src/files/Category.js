@@ -12,7 +12,8 @@ export default function Category() {
 
   const allCat = async () => {
     axios
-      .get("http://localhost/ReactJs/Projects/chari/api/category.php")
+      // .get("http://localhost/ReactJs/Projects/chari/api/category.php")
+      .get("api/category.php")
       .then((res) => {
         console.log(res.data.datas.pr);
         setCategory(res.data.datas.pr);
@@ -54,12 +55,18 @@ export default function Category() {
       {/* <!-- Page Header End --> */}
 
       <div className="container">
-        <h1 className="textAlign: center">Category List</h1>
-        <table className="table table-striped">
+        <h1
+          className=""
+          style={{ textAlign: "center", margin: "30px 0px 30px " }}
+        >
+          Category List
+        </h1>
+        <table className="table table-bordered table-striped text-center">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
+              <th>Category Name</th>
+              <th>Category Status</th>
             </tr>
           </thead>
           <tbody>
@@ -67,6 +74,7 @@ export default function Category() {
               <tr key={item.id}>
                 <td>{index + 1}</td>
                 <td>{item.categories_name}</td>
+                <td>{item.categories_status}</td>
               </tr>
             ))}
           </tbody>

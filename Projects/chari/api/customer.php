@@ -1,15 +1,16 @@
 <?php
 
 include('db_connection.php');
-$sql = "SELECT * FROM employee_list";
+$sql = "SELECT * FROM tbl_client";
 $result = mysqli_query($db_conn, $sql);
 
 while ($row = mysqli_fetch_assoc($result)) {
-    $employee_list['id'] = $row['id'];
-    $employee_list['employee_name'] = $row['employee_name'];
-    $employee_list['designation'] = $row['designation'];
-    $employee_list['phone_nb'] = $row['phone_nb'];
+    $tbl_client['id'] = $row['id'];
+    $tbl_client['name'] = $row['name'];
+    $tbl_client['department'] = $row['department'];
+    $tbl_client['mob_no'] = $row['mob_no'];
+    $tbl_client['floor_nb'] = $row['floor_nb'];
 
-    $myemployee_list['pr'][] = $employee_list;
+    $mytbl_client['pr'][] = $tbl_client;
 }
-echo json_encode(["success" => "yes",  "datas" => $myemployee_list]);
+echo json_encode(["success" => "yes",  "datas" => $mytbl_client]);

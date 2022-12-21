@@ -5,21 +5,22 @@ $data = file_get_contents("php://input");
 // echo $data;
 $data = json_decode($data);
 
-$fname = $data->fname;
-$lname = $data->lname;
-$email = $data->email;
-$password = $data->password;
-if ($fname && $lname && $email && $password) {
+$order_date = $data->order_date;
+$client_name = $data->client_name;
+$client_contact = $data->client_contact;
+$sub_total = $data->sub_total;
+if ($order_date && $client_name && $client_contact && $sub_total) {
 
-    $result = mysqli_query($db_conn, "SELECT * FROM register_form WHERE fname = '$fname' AND email = '$email'");
-    if (mysqli_num_rows($result) > 0) {
-        echo json_encode("Please use Diffrent name & email");
+    // $result = mysqli_query($db_conn, "SELECT * FROM register_form WHERE fname = '$fname' AND email = '$email'");
+    // if (mysqli_num_rows($result) > 0) {
+    //     echo json_encode("Please use Diffrent name & email");
+    // } 
+    // else{
+    $result = mysqli_query($db_conn, "INSERT  INTO  orders (order_date, client_name, client_contact, sub_total) VALUES ('$order_date', '$client_name', '$client_contact', '$sub_total' )");
+    if (mysqli_affected_rows($db_conn) > 0) {
+        echo json_encode(["msg" => "Your Orderd submitted succesfully"]);
     } else {
-        $result = mysqli_query($db_conn, "INSERT  INTO  register_form (fname, lname, email, password) VALUES ('$fname', '$lname', '$email', '$password' )");
-        if (mysqli_affected_rows($db_conn) > 0) {
-            echo json_encode(["msg" => "Your Information Registered succesfully"]);
-        } else {
-            echo json_encode("All data must be filled");
-        }
+        echo json_encode("All data must be filled");
     }
+    // }
 }

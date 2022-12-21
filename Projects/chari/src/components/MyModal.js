@@ -24,7 +24,8 @@ export default function MyModal() {
   }
   function dataSubmit(res) {
     axios
-      .post("http://localhost/ReactJs/Projects/chari/api/mymodal.php", info)
+      // .post("http://localhost/ReactJs/Projects/chari/api/mymodal.php", info)
+      .post("api/mymodal.php", info)
       .then((res) => {
         alert(res.data.msg);
       });

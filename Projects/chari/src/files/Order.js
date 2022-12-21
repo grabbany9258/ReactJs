@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// import Dropdown from "react-bootstrap/Dropdown";
 
 export default function Order() {
   const navigate = useNavigate();
@@ -14,8 +15,8 @@ export default function Order() {
     e.preventDefault();
     axios
       .post(
-        "http://localhost/ReactJs/Projects/chari/api/registration.php",
-        // "api/registration.php",
+        // "http://localhost/ReactJs/Projects/chari/api/order.php",
+        "api/order.php",
         info
       )
       .then((res) => {
@@ -81,14 +82,14 @@ export default function Order() {
 
                         <form className="mx-1 mx-md-4" onSubmit={formSubmit}>
                           <label className="form-label" for="form3Example1c">
-                            First Name
+                            Customer Name
                           </label>
                           <div className="d-flex flex-row align-items-center mb-4">
                             <div className="form-outline flex-fill mb-2">
                               <input
                                 type="text"
-                                id="fname"
-                                name="fname"
+                                id="client_name"
+                                name="client_name"
                                 className="form-control"
                                 onChange={changeValue}
                               />
@@ -96,15 +97,15 @@ export default function Order() {
                           </div>
 
                           <label className="form-label" for="form3Example1c">
-                            Last Name
+                            Customer Contact
                           </label>
 
                           <div className="d-flex flex-row align-items-center mb-4">
                             <div className="form-outline flex-fill mb-0">
                               <input
                                 type="text"
-                                id="lname"
-                                name="lname"
+                                id="client_contact"
+                                name="client_contact"
                                 className="form-control"
                                 onChange={changeValue}
                               />
@@ -112,30 +113,30 @@ export default function Order() {
                           </div>
 
                           <label className="form-label" for="form3Example1c">
-                            Email
+                            Order Date
                           </label>
+                          <div className="d-flex flex-row align-items-center mb-4">
+                            <div className="form-outline flex-fill mb-0">
+                              <input
+                                type="date"
+                                id="order_date"
+                                name="order_date"
+                                className="form-control"
+                                onChange={changeValue}
+                              />
+                            </div>
+                          </div>
+
+                          <label className="form-label" for="form3Example1c">
+                            Food
+                          </label>
+
                           <div className="d-flex flex-row align-items-center mb-4">
                             <div className="form-outline flex-fill mb-0">
                               <input
                                 type="text"
-                                id="email"
-                                name="email"
-                                className="form-control"
-                                onChange={changeValue}
-                              />
-                            </div>
-                          </div>
-
-                          <label className="form-label" for="form3Example1c">
-                            Password
-                          </label>
-
-                          <div className="d-flex flex-row align-items-center mb-4">
-                            <div className="form-outline flex-fill mb-0">
-                              <input
-                                type="password"
-                                id="password"
-                                name="password"
+                                id="sub_total"
+                                name="sub_total"
                                 className="form-control"
                                 onChange={changeValue}
                               />
@@ -147,7 +148,7 @@ export default function Order() {
                               type="submit"
                               className="btn btn-primary btn-lg"
                             >
-                              Register
+                              Order Food
                             </button>
                           </div>
                         </form>

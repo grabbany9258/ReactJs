@@ -384,7 +384,7 @@ export default function Home() {
                   src="assets/img/icon-1.png"
                   alt=""
                 />
-                <h4 className="mb-3">Breakfast Tea</h4>
+                <h4 className="mb-3">Morning Tea</h4> 
                 <p className="mb-4">
                   Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum
                   diam justo sed vero dolor duo.
