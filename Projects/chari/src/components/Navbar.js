@@ -118,8 +118,8 @@ export default function Navbar() {
             <div className="d-none d-lg-flex ms-2">
               <a
                 className="btn btn-outline-primary py-2 px-3"
-                // href="http://localhost/ReactJs/Projects/chari/youthappam/login.php"
-                href="youthappam/login.php"
+                href="http://localhost/ReactJs/Projects/chari/youthappam/login.php"
+                // href="youthappam/login.php"
               >
                 Admin
                 <div className="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">

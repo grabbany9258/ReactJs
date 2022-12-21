@@ -14,8 +14,8 @@ export default function Register() {
     e.preventDefault();
     axios
       .post(
-        // "http://localhost/ReactJs/Projects/chari/api/registration.php",
-        "api/registration.php",
+        "http://localhost/ReactJs/Projects/chari/api/registration.php",
+        // "api/registration.php",
         info
       )
       .then((res) => {

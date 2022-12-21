@@ -12,8 +12,8 @@ export default function Category() {
 
   const allCat = async () => {
     axios
-      // .get("http://localhost/ReactJs/Projects/chari/api/category.php")
-      .get("api/category.php")
+      .get("http://localhost/ReactJs/Projects/chari/api/category.php")
+      // .get("api/category.php")
       .then((res) => {
         console.log(res.data.datas.pr);
         setCategory(res.data.datas.pr);

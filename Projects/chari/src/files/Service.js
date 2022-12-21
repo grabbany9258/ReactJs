@@ -12,8 +12,8 @@ export default function Service() {
 
   const allService = async () => {
     axios
-      // .get("http://localhost/ReactJs/Projects/chari/api/service.php")
-      .get("api/service.php")
+      .get("http://localhost/ReactJs/Projects/chari/api/service.php")
+      // .get("api/service.php")
       .then((res) => {
         console.log(res.data.datas.pr);
         setService(res.data.datas.pr);

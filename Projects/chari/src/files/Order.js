@@ -15,8 +15,8 @@ export default function Order() {
     e.preventDefault();
     axios
       .post(
-        // "http://localhost/ReactJs/Projects/chari/api/order.php",
-        "api/order.php",
+        "http://localhost/ReactJs/Projects/chari/api/order.php",
+        // "api/order.php",
         info
       )
       .then((res) => {

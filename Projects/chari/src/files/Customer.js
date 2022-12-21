@@ -12,8 +12,8 @@ export default function Customers() {
 
   const allCustomer = async () => {
     axios
-      // .get("http://localhost/ReactJs/Projects/chari/api/customer.php")
-      .get("api/customer.php")
+      .get("http://localhost/ReactJs/Projects/chari/api/customer.php")
+      // .get("api/customer.php")
       .then((res) => {
         console.log(res.data.datas.pr);
         setCustomer(res.data.datas.pr);
