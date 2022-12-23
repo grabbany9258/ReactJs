@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import Dropdown from "react-bootstrap/Dropdown";
@@ -6,9 +6,19 @@ import { useNavigate } from "react-router-dom";
 export default function Order() {
   const navigate = useNavigate();
   const [info, setInfo] = useState({});
+  useEffect(() => {
+    getCartItems();
+  }, []);
 
   const changeValue = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
+    getCartItems();
+  };
+
+  const getCartItems = (e) => {
+    var cartItems = sessionStorage.getItem("cartItems");
+    document.getElementById("product_id").value = cartItems;
+    info.product_id = cartItems;
   };
   //console.log(info);
   const formSubmit = (e) => {
@@ -135,8 +145,8 @@ export default function Order() {
                             <div className="form-outline flex-fill mb-0">
                               <input
                                 type="text"
-                                id="sub_total"
-                                name="sub_total"
+                                id="product_id"
+                                name="product_id"
                                 className="form-control"
                                 onChange={changeValue}
                               />

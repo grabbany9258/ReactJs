@@ -20,6 +20,32 @@ export default function Service() {
       });
   };
 
+  function removeDuplicates(arr) {
+    return arr.filter((item, index) => arr.indexOf(item) === index);
+  }
+
+  const addtocart = async (id) => {
+    var cartItems = sessionStorage.getItem("cartItems");
+    var cartItemsArray = [];
+    if (cartItems != null) cartItemsArray = cartItems.split(",");
+
+    cartItemsArray.push(id);
+    let uniqueChars = removeDuplicates(cartItemsArray);
+    console.log(uniqueChars);
+    cartItems = uniqueChars.join(",");
+    console.log(cartItems);
+    cartItems = sessionStorage.setItem("cartItems", cartItems);
+    /*
+    axios
+      .get("http://localhost/ReactJs/Projects/chari/api/cart.php?menu_id=" + id)
+      // .get("api/service.php")
+      .then((res) => {
+        console.log(res.data.datas.pr);
+        setService(res.data.datas.pr);
+      });
+      */
+  };
+
   return (
     <div>
       {/* <!-- Page Header Start --> */}
@@ -66,29 +92,35 @@ export default function Service() {
             <h1 className="display-6 mb-5">Menu List</h1>
           </div>
           <div className="row g-4 justify-content-center">
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              {service.map((item, index) => (
+            {service.map((item, index) => (
+              <div
+                className="col-lg-4 col-md-6 wow fadeInUp"
+                data-wow-delay="0.1s"
+              >
                 <div className="service-item bg-white text-center h-100 p-4 p-xl-5">
                   <img
                     className="img-fluid mb-4"
-                    src="assets/img/icon-1.png"
+                    src="assets/img/{item.image}"
                     alt=""
                   />
-                  {/* <h4 className="mb-3">Morning Tea</h4> */}
+
                   <h4 className="mb-3">{item.name}</h4>
                   <p className="mb-4">{item.description}</p>
-                  <a className="btn btn-outline-primary px-3" href="a">
-                    Details
+                  <a
+                    className="btn btn-outline-primary px-3"
+                    href="javascript:"
+                    onClick={() => addtocart(item.id)}
+                  >
+                    Add to cart
                     <div className="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
                       <i className="fa fa-arrow-right"></i>
                     </div>
                   </a>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+
+            {/*
             <div
               className="col-lg-4 col-md-6 wow fadeInUp"
               data-wow-delay="0.3s"
@@ -133,8 +165,9 @@ export default function Service() {
                     <i className="fa fa-arrow-right"></i>
                   </div>
                 </a>
-              </div>
+              </div> 
             </div>
+            */}
           </div>
         </div>
       </div>

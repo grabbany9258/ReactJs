@@ -14,6 +14,7 @@ import MyModal from "./components/MyModal";
 import Register from "./files/Register";
 import Category from "./files/Category";
 import Order from "./files/Order";
+import Cart from "./files/Cart";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/category" element={<Category />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
     </Routes>
   );
