@@ -18,9 +18,10 @@ if($_POST) {
 
 	$sql = "SELECT * FROM orders WHERE order_date >= '$startDate' AND order_date <= '$endDate' and order_status = 1";
 	$query = $connect->query($sql);
- 
+	$report = '<h1 style="margin-left:45%; margin-top:5%;">DateWise Report</h1>';
+    echo $report;
 	$table = '
-	<table border="1" cellspacing="0" cellpadding="0" style="width:80%;">
+	<table border="1" cellspacing="0" cellpadding="0" style="width:80%; margin-left:10%; margin-top:10px;">
 		<tr>
 			<th>Order Date</th>
 			<th>Client Name</th>
@@ -39,8 +40,8 @@ if($_POST) {
 
 			$table .= '<tr>
 				<td><center>'.$result['order_date'].'</center></td>
-				<td><center>'.$data1['name'].'</center></td>
-				<td><center>'.$data1['mob_no'].'</center></td>
+				<td><center>'.$result['client_name'].'</center></td>
+				<td><center>'.$result['client_contact'].'</center></td>
 				<td><center>'.$result['grand_total'].'</center></td>
 			</tr>';	
 			$totalAmount += $result['grand_total'];

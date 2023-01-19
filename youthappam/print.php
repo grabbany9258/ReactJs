@@ -153,7 +153,7 @@ include('./constant/connect.php'); ?>
                         </div>
                     </div>
                     <div class="card-footer bg-white">
-                        <p class="mb-0">Thank you for your business !</p>
+                        <p class="mb-0">Thank you for Coming !</p>
                     </div>
                 </div>
 
